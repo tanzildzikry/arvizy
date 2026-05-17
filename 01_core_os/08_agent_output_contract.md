@@ -506,6 +506,200 @@ NEEDS REVIEW
 
 ---
 
+## 16A. Semantic Model / .bim Review Output Format
+
+Use this output format when the user uploads or references a `.bim`, semantic model export, model schema, relationship metadata, or asks for a general review of schema, model, relationships, DAX, or measures.
+
+The purpose of this format is to prevent generic model reviews and ensure the agent checks model structure, usability, relationships, measures, validation, and dashboard impact.
+
+```text
+## Semantic Model Review Output
+
+### 1. Scope
+
+State what model file or evidence is reviewed.
+
+Also state what is not reviewed, such as:
+- no SQL execution
+- no documentation update
+- no Final Review
+- no approval without validation evidence
+
+### 2. Tables and Role Classification
+
+List each table and classify it as:
+- FACT
+- DIMENSION
+- CONTROL / RECONCILIATION
+- MEASURE CONTAINER
+- HELPER / BRIDGE
+- DETAIL / ISSUE FACT
+- UNKNOWN
+
+For each table, describe purpose, inferred grain if available, and report usability concerns.
+
+### 3. Relationship Review
+
+Review:
+- fact-to-dimension paths
+- missing slicer paths
+- inactive relationship risk
+- cardinality risk
+- filter direction risk
+- fact-to-fact risk
+- many-to-many risk
+- bidirectional risk
+- disconnected control table status
+
+### 4. Filter Path and Slicer Behavior
+
+Explain which slicers are expected to affect which fact tables or dashboard pages.
+
+At minimum review:
+- PIC / owner slicer
+- customer slicer, if present
+- date / snapshot slicer
+- BC / transaction slicer
+- category / status slicer
+- risk / aging slicer
+
+### 5. Measure Architecture Review
+
+Review:
+- measure container table
+- measure folders
+- base measures
+- derived measures
+- ratio measures
+- reconciliation measures
+- guardrail measures
+- redundant by-dimension measures
+- measure dependency clarity
+
+### 6. DAX / Measure Risk Findings
+
+Identify measure risks such as:
+- COUNTROWS vs DISTINCTCOUNT grain dependency
+- hardcoded filters
+- SUM over pre-filtered amount columns
+- broad ALL() / REMOVEFILTERS()
+- DIVIDE usage
+- control table selector risk
+- context-sensitive vs global guardrail measures
+
+### 7. Column Hygiene and Usability
+
+Review:
+- visible technical columns
+- raw text / remarks columns
+- IDs and run IDs
+- relationship keys
+- non-additive numeric columns
+- ratios, durations, and flags
+- fields that should be hidden from report users
+
+Classify:
+
+Column Hygiene Risk:
+LOW / MEDIUM / HIGH
+
+### 8. Date Role Review
+
+Classify the date design as:
+- SINGLE ROLE DATE
+- ROLE-PLAYING DATE NEEDED
+- LATEST-ONLY FACT ACCEPTABLE
+- DATE MODEL GAP
+- NEEDS REVIEW
+
+Explain date roles such as snapshot date, event date, invoice date, due date, or closing date when present.
+
+### 9. Control and Reconciliation Review
+
+Review:
+- whether control tables are disconnected
+- whether controls are one-row or multi-snapshot
+- whether control measures select the correct control row
+- whether reconciliation measures exist
+- whether movement controls are used
+- whether KPI cards can reconcile to SQL/control outputs
+
+### 10. Dashboard Page Impact
+
+Map findings to dashboard impact.
+
+Examples:
+- Executive Overview
+- Summary / Analytical pages
+- PIC Analysis
+- Movement / Trend page
+- Operational Detail page
+
+### 11. Recommended Fix Priority
+
+Classify findings by:
+
+Priority 0 — Blocker
+Priority 1 — Must Validate Before Approval
+Priority 2 — Recommended Model Improvement
+Priority 3 — Optional Optimization
+
+### 12. Required Validation
+
+List required validation:
+- fact grain
+- dimension key uniqueness
+- orphan keys
+- row counts
+- control table grain
+- KPI reconciliation
+- relationship behavior
+- visual-level reconciliation
+
+### 13. Decision
+
+Use Arvizy decision labels:
+- APPROVED
+- APPROVED FOR IMPLEMENTATION
+- PASS STRUCTURE ONLY
+- NEEDS REVIEW
+- NEEDS REVISION
+- BLOCKED
+- FAILED VALIDATION
+
+For `.bim` review, common safe combinations are:
+
+Structure Status:
+PASS STRUCTURE ONLY
+
+Implementation Status:
+NEEDS REVIEW
+or
+NEEDS REVISION
+
+### 14. Risk Level
+
+Use:
+LOW / MEDIUM / HIGH
+
+Explain why.
+
+### 15. Handover to Next Agent
+
+Recommend next agent:
+- SQL Validator Agent for grain/key/reconciliation validation
+- SQL Optimizer Agent if logic belongs upstream
+- Documentation Agent if review record/status wording is needed
+- Final Review Agent only after evidence is complete
+```
+
+Important rule:
+
+A `.bim` or semantic model export can prove model structure and measure definitions, but it does not prove data quality, grain validity, orphan key status, row counts, or KPI reconciliation unless actual validation output is provided.
+
+
+---
+
 ## 17. Review Record Compatibility
 
 Every agent output should be easy to convert into a review record.
