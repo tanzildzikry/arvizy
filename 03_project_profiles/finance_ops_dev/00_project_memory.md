@@ -1,4 +1,4 @@
-﻿# Project Memory â€” finance_ops_dev
+﻿# Project Memory — finance_ops_dev
 
 ## 1. Project Identity
 
@@ -17,7 +17,7 @@ Finance Operations / AR Collection BI dashboard project
 Primary use case:
 
 ```text
-SQL-to-BI platform analytics system for monitoring AR Collection, Business Control, unbilled exposure, backlog movement, and operational control readiness.
+SQL-to-Power BI analytics system for monitoring AR Collection, Business Control, unbilled exposure, backlog movement, and operational control readiness.
 ```
 
 Arvizy role:
@@ -39,7 +39,7 @@ The finance_ops_dev project is designed to support:
 - AR Collection control
 - Business Control visibility
 - backlog monitoring
-- BI semantic model readiness
+- Power BI semantic model readiness
 - documentation-driven project continuity
 
 The dashboard must help users understand:
@@ -100,25 +100,25 @@ The project follows this data architecture:
 
 ```text
 CSV / Source File
-â†“
+↓
 PostgreSQL Raw Layer
-â†“
+↓
 PostgreSQL Core / Clean Layer
-â†“
+↓
 PostgreSQL Mart / Reporting Layer
-â†“
-BI Semantic Model
-â†“
-BI Dashboard Pages
+↓
+Power BI Semantic Model
+↓
+Power BI Dashboard Pages
 ```
 
 Current schema concept:
 
 ```text
 01_raw
-â†“
+↓
 02_core
-â†“
+↓
 03_mart
 ```
 
@@ -156,9 +156,9 @@ The dashboard should support layered analysis:
 
 ```text
 Executive Layer
-â†“
+↓
 Analytical Layer
-â†“
+↓
 Operational Layer
 ```
 
@@ -198,7 +198,7 @@ Purpose:
 Current phase context:
 
 ```text
-Phase 12 â€” BI Semantic Model Build / Relationship Setup
+Phase 12 — Power BI Semantic Model Build / Relationship Setup
 ```
 
 Phase 12 intent:
@@ -208,13 +208,13 @@ Phase 12 intent:
 - define fact/dimension/control table roles
 - avoid unnecessary raw/core table loading
 - establish relationship readiness
-- prepare canonical measure baseline
-- validate BI platform implementation against SQL reporting layer
+- prepare canonical DAX baseline
+- validate Power BI implementation against SQL reporting layer
 
 Current caution:
 
 ```text
-Phase 12 must not be marked as fully passed until BI platform implementation, relationship validation, measure validation, and KPI reconciliation are completed.
+Phase 12 must not be marked as fully passed until Power BI implementation, relationship validation, DAX validation, and KPI reconciliation are completed.
 ```
 
 ---
@@ -253,7 +253,7 @@ must only be used when full evidence supports completion.
 
 ## 9. Primary Data Model Intent
 
-The BI platform model should be:
+The Power BI model should be:
 
 - lean
 - curated
@@ -263,7 +263,7 @@ The BI platform model should be:
 - easy to explain
 - suitable for executive and operational pages
 
-BI platform should consume curated mart/reporting views.
+Power BI should consume curated mart/reporting views.
 
 Raw or core operational tables should not be loaded into the main PBIX unless explicitly required for admin/debug purposes.
 
@@ -277,7 +277,7 @@ The semantic model should prioritize:
 - stable relationships
 - no fact-to-fact relationship unless explicitly justified
 - disconnected control tables for reconciliation
-- canonical analytical measures
+- canonical DAX measures
 - relationship-driven slicing
 - controlled measure naming
 - no duplicate visual-specific measures
@@ -294,7 +294,7 @@ SQL should prioritize:
 - business correctness
 - clear grain
 - validation readiness
-- BI platform consumption readiness
+- Power BI consumption readiness
 
 SQL style preference:
 
@@ -306,9 +306,9 @@ SQL style preference:
 
 ---
 
-## 12. Measure Logic Principles for This Project
+## 12. DAX Principles for This Project
 
-measure logic should prioritize:
+DAX should prioritize:
 
 - canonical measures
 - base measures first
@@ -319,7 +319,7 @@ measure logic should prioritize:
 - SQL reconciliation for KPI measures
 - filter context correctness
 
-measure logic should not recreate SQL business shaping logic unless justified.
+DAX should not recreate SQL business shaping logic unless justified.
 
 ---
 
@@ -331,7 +331,7 @@ Documentation must remain:
 - evidence-aware
 - phase-aware
 - handover-ready
-- repository-friendly
+- GitHub-friendly
 - operationally useful
 
 Progress logs must preserve historical progress.
@@ -370,7 +370,7 @@ When Arvizy reviews finance_ops_dev, it must read this project profile together 
 - blocked patterns
 - semantic model profile
 - dashboard blueprint profile
-- relevant SQL/measure logic/project evidence
+- relevant SQL/DAX/project evidence
 
 If evidence is missing, Arvizy must return:
 
@@ -393,8 +393,5 @@ Used for:
 First Arvizy project profile / case study
 
 Framework phase:
-Phase 4 â€” Finance Ops Dev Project Profile Build
+Phase 4 — Finance Ops Dev Project Profile Build
 ```
-
-
-

@@ -1,4 +1,4 @@
-﻿# Evidence Policy â€” Arvizy
+﻿# Evidence Policy — Arvizy
 
 ## 1. Purpose
 
@@ -13,7 +13,7 @@ The evidence policy prevents:
 - stale memory usage
 - undocumented assumptions
 - accidental phase completion
-- unsafe SQL or measure logic changes
+- unsafe SQL or DAX changes
 - documentation drift
 
 ---
@@ -49,8 +49,8 @@ Valid evidence may include:
 - orphan key validation output
 - latest SQL view definition
 - latest semantic model export
-- latest `semantic model export` structure
-- BI platform relationship screenshot
+- latest `.bim` structure
+- Power BI relationship screenshot
 - KPI card reconciliation result
 - Git status
 - Git diff/stat
@@ -129,7 +129,7 @@ NEEDS REVISION
 
 ---
 
-### Measure Optimization
+### DAX Optimization
 
 Required evidence for final approval:
 
@@ -147,7 +147,7 @@ Use:
 NEEDS REVIEW
 ```
 
-or clearly mark any measure logic as draft.
+or clearly mark any DAX as draft.
 
 ---
 
@@ -201,9 +201,9 @@ Use the following strength order:
 8. Assumption
 ```
 
-Items 1â€“5 may support approval.
+Items 1–5 may support approval.
 
-Items 6â€“8 cannot support approval by themselves.
+Items 6–8 cannot support approval by themselves.
 
 ---
 
@@ -267,7 +267,7 @@ Evidence:
 
 Missing Evidence:
 - KPI card reconciliation
-- BI platform relationship validation
+- Power BI relationship validation
 - final user validation
 ```
 
@@ -359,8 +359,5 @@ Applies to:
 All Arvizy agent modes
 
 Framework phase:
-Phase 2 â€” Core OS Knowledge Build
+Phase 2 — Core OS Knowledge Build
 ```
-
-
-

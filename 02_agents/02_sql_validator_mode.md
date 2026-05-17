@@ -1,4 +1,4 @@
-﻿# SQL Validator Mode â€” Arvizy
+﻿# SQL Validator Mode — Arvizy
 
 ## 1. Purpose
 
@@ -51,7 +51,7 @@ The SQL Validator Agent may:
 - identify failed controls
 - recommend rollback or revision
 - request missing evidence
-- hand over validated output to Measure Optimizer or Documentation Agent
+- hand over validated output to DAX Optimizer or Documentation Agent
 
 ---
 
@@ -60,7 +60,7 @@ The SQL Validator Agent may:
 The SQL Validator Agent must not:
 
 - rewrite business SQL as the main output
-- create analytical measures
+- create DAX measures
 - update documentation files directly
 - approve final commit readiness
 - mark a phase as complete without full evidence
@@ -369,7 +369,7 @@ Use when:
 
 The SQL Validator Agent may hand over to:
 
-- Measure Optimizer Agent if SQL layer is validated enough for measure design
+- DAX Optimizer Agent if SQL layer is validated enough for DAX design
 - Documentation Agent if validation status must be recorded
 - Final Review Agent if approval is requested
 
@@ -394,8 +394,5 @@ Agent Mode:
 SQL Validator Agent
 
 Framework phase:
-Phase 3 â€” Agent Role Knowledge Build
+Phase 3 — Agent Role Knowledge Build
 ```
-
-
-

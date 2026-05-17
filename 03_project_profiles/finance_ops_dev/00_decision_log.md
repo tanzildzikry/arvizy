@@ -1,4 +1,4 @@
-﻿# Decision Log â€” finance_ops_dev
+﻿# Decision Log — finance_ops_dev
 
 ## 1. Purpose
 
@@ -39,7 +39,7 @@ Definitions:
 
 ## 3. Locked Decisions
 
-### Decision 001 â€” Use Arvizy as Separate Project
+### Decision 001 — Use Arvizy as Separate Project
 
 Status:
 
@@ -73,7 +73,7 @@ Only change if Arvizy becomes tightly coupled to finance_ops_dev and can no long
 
 ---
 
-### Decision 002 â€” Separate Core OS from Project Profile
+### Decision 002 — Separate Core OS from Project Profile
 
 Status:
 
@@ -105,7 +105,7 @@ None planned.
 
 ---
 
-### Decision 003 â€” Use Curated Reporting Objects for BI platform
+### Decision 003 — Use Curated Reporting Objects for Power BI
 
 Status:
 
@@ -116,14 +116,14 @@ ACTIVE
 Decision:
 
 ```text
-BI platform should consume curated mart/reporting objects, not raw or uncontrolled source tables, unless explicitly required for admin/debug purposes.
+Power BI should consume curated mart/reporting objects, not raw or uncontrolled source tables, unless explicitly required for admin/debug purposes.
 ```
 
 Reason:
 
 - Reduces semantic model clutter.
 - Improves performance and clarity.
-- Reduces measure logic compensation for poor upstream shaping.
+- Reduces DAX compensation for poor upstream shaping.
 - Supports executive-to-operational dashboard flow.
 
 Impact:
@@ -140,7 +140,7 @@ Allowed only if a specific admin/debug page requires raw/core visibility and the
 
 ---
 
-### Decision 004 â€” Control Tables Should Stay Disconnected
+### Decision 004 — Control Tables Should Stay Disconnected
 
 Status:
 
@@ -151,7 +151,7 @@ ACTIVE
 Decision:
 
 ```text
-Control/reconciliation tables should remain disconnected in the BI semantic model unless explicit justification exists.
+Control/reconciliation tables should remain disconnected in the Power BI semantic model unless explicit justification exists.
 ```
 
 Reason:
@@ -163,7 +163,7 @@ Reason:
 Impact:
 
 - Arvizy must flag control table relationships as implementation drift unless justified.
-- measure reconciliation should not assume control table relationships.
+- DAX reconciliation should not assume control table relationships.
 
 Reversal condition:
 
@@ -173,7 +173,7 @@ Allowed only after semantic model review and explicit validation.
 
 ---
 
-### Decision 005 â€” Avoid Fact-to-Fact Relationships
+### Decision 005 — Avoid Fact-to-Fact Relationships
 
 Status:
 
@@ -184,7 +184,7 @@ ACTIVE
 Decision:
 
 ```text
-BI platform model should avoid direct fact-to-fact relationships unless explicitly justified.
+Power BI model should avoid direct fact-to-fact relationships unless explicitly justified.
 ```
 
 Reason:
@@ -205,7 +205,7 @@ Allowed only if no dimensional alternative exists and validation confirms correc
 
 ---
 
-### Decision 006 â€” Avoid Bidirectional Filters by Default
+### Decision 006 — Avoid Bidirectional Filters by Default
 
 Status:
 
@@ -237,7 +237,7 @@ Allowed only with explicit reason, relationship validation, and visual behavior 
 
 ---
 
-### Decision 007 â€” Canonical Analytical Measures Only
+### Decision 007 — Canonical DAX Measures Only
 
 Status:
 
@@ -248,7 +248,7 @@ ACTIVE
 Decision:
 
 ```text
-measure logic should use canonical reusable measures rather than duplicate visual-specific measures.
+DAX should use canonical reusable measures rather than duplicate visual-specific measures.
 ```
 
 Reason:
@@ -270,7 +270,7 @@ Allowed only when a visual-specific measure has a distinct calculation behavior 
 
 ---
 
-### Decision 008 â€” Existing Measure First
+### Decision 008 — Existing Measure First
 
 Status:
 
@@ -281,7 +281,7 @@ ACTIVE
 Decision:
 
 ```text
-Before creating a new analytical measure, check existing measures first.
+Before creating a new DAX measure, check existing measures first.
 ```
 
 Reason:
@@ -292,7 +292,7 @@ Reason:
 
 Impact:
 
-- If existing measure list is missing, measure output must be marked `NEEDS REVIEW` or draft.
+- If existing measure list is missing, DAX output must be marked `NEEDS REVIEW` or draft.
 
 Reversal condition:
 
@@ -302,7 +302,7 @@ None planned.
 
 ---
 
-### Decision 009 â€” Movement Trend Requires Sufficient Snapshot Dates
+### Decision 009 — Movement Trend Requires Sufficient Snapshot Dates
 
 Status:
 
@@ -334,7 +334,7 @@ When validation confirms enough distinct snapshot dates for movement analysis.
 
 ---
 
-### Decision 010 â€” Progress Log Must Be Cumulative
+### Decision 010 — Progress Log Must Be Cumulative
 
 Status:
 
@@ -352,7 +352,7 @@ Reason:
 
 - Prevents loss of project history.
 - Supports handover between chats.
-- Supports repository audit trail.
+- Supports GitHub audit trail.
 
 Impact:
 
@@ -367,7 +367,7 @@ None planned.
 
 ---
 
-### Decision 011 â€” Validation Before Status Upgrade
+### Decision 011 — Validation Before Status Upgrade
 
 Status:
 
@@ -400,7 +400,7 @@ None planned.
 
 ---
 
-### Decision 012 â€” Readability Over Compactness
+### Decision 012 — Readability Over Compactness
 
 Status:
 
@@ -443,7 +443,7 @@ This decision log must be updated when:
 - a blocked pattern is reversed
 - a new validation policy is introduced
 - a semantic model decision is locked
-- a measure naming rule is changed
+- a DAX naming rule is changed
 - a phase changes status based on evidence
 
 If a decision conflicts with direct validation evidence, apply the Arvizy Conflict Resolution Rules.
@@ -460,8 +460,5 @@ Project Profile:
 finance_ops_dev
 
 Framework phase:
-Phase 4 â€” Finance Ops Dev Project Profile Build
+Phase 4 — Finance Ops Dev Project Profile Build
 ```
-
-
-

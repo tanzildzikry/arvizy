@@ -1,4 +1,4 @@
-﻿# Naming Registry â€” finance_ops_dev
+﻿# Naming Registry — finance_ops_dev
 
 ## 1. Purpose
 
@@ -9,7 +9,7 @@ The naming registry helps Arvizy agents avoid:
 - hallucinated table names
 - nonexistent column names
 - deprecated names
-- inconsistent measure naming
+- inconsistent DAX naming
 - broken SQL references
 - semantic model mismatch
 
@@ -25,7 +25,7 @@ Direct evidence may include:
 
 - latest SQL view definition
 - latest `information_schema` output
-- latest `semantic model export` file
+- latest `.bim` file
 - latest semantic model export
 - latest user-provided column list
 - latest validated project documentation
@@ -169,11 +169,11 @@ Agents must not use them unless latest direct evidence confirms they are valid.
 | `unbill_aging` | Older variation; current naming may be `unbilled_aging` or curated equivalent |
 | `revenue` | May be replaced by `revenue_value` in curated reporting views |
 | `cost` | May be replaced by `cost_value` in curated reporting views |
-| `FACT_BC FINAL` | Older BI platform naming; use current source-of-truth naming if applicable |
+| `FACT_BC FINAL` | Older Power BI naming; use current source-of-truth naming if applicable |
 
 ---
 
-## 8. Expected BI platform Reporting Object Pattern
+## 8. Expected Power BI Reporting Object Pattern
 
 Phase 12 may use curated reporting objects such as:
 
@@ -187,17 +187,17 @@ Phase 12 may use curated reporting objects such as:
 | `Dim_PIC` | PIC dimension | NEEDS FRESHNESS CHECK |
 | `Dim_BC` | BC dimension | NEEDS FRESHNESS CHECK |
 | `Dim_Date` | date dimension | NEEDS FRESHNESS CHECK |
-| `_Measures` | analytical measure container | NEEDS FRESHNESS CHECK |
+| `_Measures` | DAX measure container | NEEDS FRESHNESS CHECK |
 
 Important:
 
-Validate exact names against latest Phase 12 documentation or latest `semantic model export`.
+Validate exact names against latest Phase 12 documentation or latest `.bim`.
 
 ---
 
-## 9. Measure Naming Rules
+## 9. DAX Naming Rules
 
-General measure naming principles:
+General DAX naming principles:
 
 - use clear business names
 - prefer canonical reusable measures
@@ -250,7 +250,7 @@ Common relationship dimensions may include:
 - date dimension
 - event category dimension
 
-Exact object names must be validated against latest semantic model profile or `semantic model export`.
+Exact object names must be validated against latest semantic model profile or `.bim`.
 
 ---
 
@@ -259,7 +259,7 @@ Exact object names must be validated against latest semantic model profile or `s
 Update this registry when:
 
 - latest schema changes
-- latest `semantic model export` is reviewed
+- latest `.bim` is reviewed
 - new reporting object names are locked
 - deprecated names are confirmed invalid
 - measure naming convention changes
@@ -288,8 +288,5 @@ Freshness:
 NEEDS DIRECT VALIDATION AGAINST LATEST REPO / DATABASE / .BIM BEFORE FINAL TECHNICAL OUTPUT
 
 Framework phase:
-Phase 4 â€” Finance Ops Dev Project Profile Build
+Phase 4 — Finance Ops Dev Project Profile Build
 ```
-
-
-

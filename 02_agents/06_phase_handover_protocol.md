@@ -1,4 +1,4 @@
-﻿# Phase Handover Protocol â€” Arvizy
+﻿# Phase Handover Protocol — Arvizy
 
 ## 1. Purpose
 
@@ -41,7 +41,7 @@ Use Phase Handover Protocol when:
 - completing a major review
 - preparing a handover document
 - committing a meaningful milestone
-- switching from SQL to measure logic work
+- switching from SQL to DAX work
 - switching from technical work to documentation
 - preserving current project state
 
@@ -202,7 +202,7 @@ For a new chat, provide at minimum:
 - validation memory
 - decision log
 - naming registry
-- relevant SQL/measure logic/semantic model files
+- relevant SQL/DAX/semantic model files
 - latest review record
 
 If these are unavailable, the new chat must be told that context is incomplete.
@@ -306,8 +306,5 @@ Protocol:
 Phase Handover Protocol
 
 Framework phase:
-Phase 3 â€” Agent Role Knowledge Build
+Phase 3 — Agent Role Knowledge Build
 ```
-
-
-

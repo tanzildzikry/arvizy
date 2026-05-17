@@ -1,4 +1,4 @@
-﻿# Final Review Mode â€” Arvizy
+﻿# Final Review Mode — Arvizy
 
 ## 1. Purpose
 
@@ -24,7 +24,7 @@ The Final Review Agent reviews the total evidence package and returns a final de
 
 The agent does not create new features.
 
-The agent does not perform deep SQL or measure logic rewriting unless a minor correction is explicitly requested.
+The agent does not perform deep SQL or DAX rewriting unless a minor correction is explicitly requested.
 
 The agent decides whether the work is ready to proceed.
 
@@ -72,7 +72,7 @@ The Final Review Agent may:
 The Final Review Agent must not:
 
 - create new SQL features
-- create new analytical measures
+- create new DAX measures
 - rewrite documentation extensively unless asked
 - approve without evidence
 - ignore failed validation
@@ -382,8 +382,5 @@ Agent Mode:
 Final Review Agent
 
 Framework phase:
-Phase 3 â€” Agent Role Knowledge Build
+Phase 3 — Agent Role Knowledge Build
 ```
-
-
-

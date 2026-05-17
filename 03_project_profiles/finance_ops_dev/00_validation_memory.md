@@ -1,378 +1,207 @@
-﻿# Project Memory â€” finance_ops_dev
+﻿# Validation Memory — finance_ops_dev
 
-## 1. Project Identity
+## 1. Purpose
 
-Project name:
+This file records validation status and validation-related memory for the `finance_ops_dev` project profile.
 
-```text
-finance_ops_dev
-```
+Validation memory helps Arvizy agents avoid overclaiming and ensures that all downstream agents understand the latest known evidence.
 
-Project type:
+Validation memory is not a substitute for direct validation evidence.
 
-```text
-Finance Operations / AR Collection BI dashboard project
-```
-
-Primary use case:
-
-```text
-SQL-to-BI platform analytics system for monitoring AR Collection, Business Control, unbilled exposure, backlog movement, and operational control readiness.
-```
-
-Arvizy role:
-
-```text
-finance_ops_dev is the first project profile and case study used to validate the Arvizy dashboard optimizer workflow.
-```
+For final approval, direct evidence must still be provided.
 
 ---
 
-## 2. Project Purpose
+## 2. Core Rule
 
-The finance_ops_dev project is designed to support:
-
-- executive overview
-- management monitoring
-- weekly reporting
-- daily operational review
-- AR Collection control
-- Business Control visibility
-- backlog monitoring
-- BI semantic model readiness
-- documentation-driven project continuity
-
-The dashboard must help users understand:
-
-- what is happening
-- why it matters
-- what should be done next
-
----
-
-## 3. Business Pillars
-
-The project is organized around three main business pillars:
+If validation evidence is incomplete, stale, or missing, use:
 
 ```text
-Unbilled
-Outstanding
-UMK
+NEEDS REVIEW
 ```
 
-### Unbilled
-
-Focus:
-
-- open BC not yet invoiced
-- unbilled exposure
-- aging
-- operational pressure
-- risk classification
-- PIC accountability
-- backlog inflow/outflow structure
-
-### Outstanding
-
-Focus:
-
-- invoices issued but not yet cash-in
-- collection follow-up
-- payment status
-- overdue exposure
-- customer-level collection visibility
-
-### UMK
-
-Focus:
-
-- operational cash accountability
-- released amount
-- issued amount
-- settlement / accountability monitoring
-- operational control tracking
-
----
-
-## 4. Current Architecture
-
-The project follows this data architecture:
-
-```text
-CSV / Source File
-â†“
-PostgreSQL Raw Layer
-â†“
-PostgreSQL Core / Clean Layer
-â†“
-PostgreSQL Mart / Reporting Layer
-â†“
-BI Semantic Model
-â†“
-BI Dashboard Pages
-```
-
-Current schema concept:
-
-```text
-01_raw
-â†“
-02_core
-â†“
-03_mart
-```
-
-The public schema should not be used for controlled project objects unless explicitly justified.
-
----
-
-## 5. Dashboard Design Philosophy
-
-The dashboard should follow:
-
-- clean corporate style
-- minimal clutter
-- executive clarity
-- operational actionability
-- narrative-driven insight
-- layered reader flow
-- efficient visual layout
-- no unnecessary decoration
-- no over-dense pages
-
-Each visual should answer at least one of:
-
-```text
-What is happening?
-Why does it matter?
-What should be done?
-```
-
----
-
-## 6. Dashboard Layering
-
-The dashboard should support layered analysis:
-
-```text
-Executive Layer
-â†“
-Analytical Layer
-â†“
-Operational Layer
-```
-
-### Executive Layer
-
-Purpose:
-
-- quick status
-- overall exposure
-- risk signal
-- key movement
-- management-ready summary
-
-### Analytical Layer
-
-Purpose:
-
-- explain drivers
-- compare segments
-- show aging/risk patterns
-- identify concentration
-- support management discussion
-
-### Operational Layer
-
-Purpose:
-
-- identify specific PIC/customer/BC items
-- support daily follow-up
-- show next action priority
-- enable control execution
-
----
-
-## 7. Current Project Phase
-
-Current phase context:
-
-```text
-Phase 12 â€” BI Semantic Model Build / Relationship Setup
-```
-
-Phase 12 intent:
-
-- prepare lean semantic model
-- load curated reporting objects only
-- define fact/dimension/control table roles
-- avoid unnecessary raw/core table loading
-- establish relationship readiness
-- prepare canonical measure baseline
-- validate BI platform implementation against SQL reporting layer
-
-Current caution:
-
-```text
-Phase 12 must not be marked as fully passed until BI platform implementation, relationship validation, measure validation, and KPI reconciliation are completed.
-```
-
----
-
-## 8. Current Status Principle
-
-The project may have structure-level readiness before full implementation readiness.
-
-Use these status distinctions carefully:
+If only structure has been validated, use:
 
 ```text
 PASS STRUCTURE ONLY
 ```
 
-means structure exists or is logically ready, but output/implementation is not fully validated.
+If validation has failed, use:
 
 ```text
-APPROVED FOR IMPLEMENTATION
+FAILED VALIDATION
 ```
 
-means design is safe to implement, but final validation is still required.
+---
+
+## 3. Current High-Level Validation Status
+
+| Area | Status | Notes |
+|---|---|---|
+| SQL reporting layer | PASS STRUCTURE ONLY | Structure may be ready, but output-level validation must be confirmed with direct evidence |
+| Power BI semantic model | NEEDS REVIEW | Requires PBIX implementation and relationship validation |
+| DAX measure baseline | NEEDS REVIEW | Requires latest semantic model and existing measure check |
+| KPI reconciliation | NEEDS REVIEW | Requires SQL/control output vs Power BI KPI card comparison |
+| Movement analysis | NEEDS REVIEW | Full movement interpretation requires enough snapshot dates |
+| Documentation consistency | NEEDS REVIEW | Must be checked after each major change |
+| Final phase readiness | NEEDS REVIEW | Cannot be marked complete without final review evidence |
+
+---
+
+## 4. Phase 12 Validation Memory
+
+Current phase context:
+
+```text
+Phase 12 — Power BI Semantic Model Build / Relationship Setup
+```
+
+Known validation principle:
+
+```text
+Phase 12 must not be marked as fully passed until Power BI table load, relationship setup, canonical DAX validation, KPI card reconciliation, and user final validation are complete.
+```
+
+Recommended current wording:
+
+```text
+Phase 12:
+IN PROGRESS / NEEDS REVIEW
+```
+
+or if structure is confirmed:
+
+```text
+PASS STRUCTURE ONLY
+```
+
+Do not use:
+
+```text
+Phase 12 PASS
+```
+
+unless full validation evidence exists.
+
+---
+
+## 5. Movement Readiness Memory
+
+Movement analysis requires enough snapshot points.
+
+If fewer than 2 distinct snapshot dates exist, movement analysis is not meaningful yet.
+
+Use:
 
 ```text
 NEEDS REVIEW
 ```
 
-means evidence is incomplete, pending, stale, or conflicting.
+or:
 
 ```text
-COMPLETED
+PASS STRUCTURE ONLY
 ```
 
-must only be used when full evidence supports completion.
+depending on what has been validated.
+
+Blocked until:
+
+- latest-per-day snapshot logic is validated
+- at least 2 distinct snapshot dates exist
+- movement output reconciles with expected inflow/outflow logic
+- Power BI movement visuals are validated
 
 ---
 
-## 9. Primary Data Model Intent
+## 6. SQL Validation Requirements
 
-The BI platform model should be:
+For SQL view or mart changes, recommended validation includes:
 
-- lean
-- curated
-- relationship-driven
-- measure-controlled
-- validation-aligned
-- easy to explain
-- suitable for executive and operational pages
+- row count validation
+- grain validation
+- duplicate key validation
+- orphan key validation
+- total reconciliation
+- status distribution check
+- null check on critical keys
+- before vs after comparison if refactoring existing logic
+- control view reconciliation if KPI-related
 
-BI platform should consume curated mart/reporting views.
-
-Raw or core operational tables should not be loaded into the main PBIX unless explicitly required for admin/debug purposes.
+Do not approve SQL as fully validated without actual validation output.
 
 ---
 
-## 10. Semantic Model Principles
+## 7. Semantic Model Validation Requirements
 
-The semantic model should prioritize:
+For Power BI semantic model readiness, validate:
 
-- clear fact/dimension separation
-- stable relationships
+- loaded table list
+- fact table grain
+- dimension table uniqueness
+- relationship keys
+- relationship cardinality
+- filter direction
+- no unintended many-to-many relationship
 - no fact-to-fact relationship unless explicitly justified
-- disconnected control tables for reconciliation
-- canonical analytical measures
-- relationship-driven slicing
-- controlled measure naming
-- no duplicate visual-specific measures
+- control tables remain disconnected
+- inactive relationships documented if used
+- model supports intended visual slicing
 
 ---
 
-## 11. SQL Principles for This Project
+## 8. DAX Validation Requirements
 
-SQL should prioritize:
+For DAX measures, validate:
 
-- readability
-- stability
-- maintainability
-- business correctness
-- clear grain
-- validation readiness
-- BI platform consumption readiness
+- existing measure check
+- naming convention
+- measure folder/order if applicable
+- base measure reuse
+- no redundant visual-specific measure
+- correct filter context
+- expected total behavior
+- visual-level behavior
+- SQL/control reconciliation for KPI measures
+- numeric/display measure separation
 
-SQL style preference:
+If the latest existing measure list is not available, DAX output must be marked:
 
-- readable CTEs
-- explicit calculation parentheses
-- no over-compact formulas
-- no unnecessary advanced patterns
-- no hidden business logic changes
+```text
+NEEDS REVIEW
+```
 
----
-
-## 12. Measure Logic Principles for This Project
-
-measure logic should prioritize:
-
-- canonical measures
-- base measures first
-- derived measures second
-- display/narrative measures separately
-- no redundant by-PIC/by-customer/by-division measures
-- relationship-driven slicing
-- SQL reconciliation for KPI measures
-- filter context correctness
-
-measure logic should not recreate SQL business shaping logic unless justified.
+or clearly identified as draft.
 
 ---
 
-## 13. Documentation Principles
+## 9. Documentation Validation Requirements
 
-Documentation must remain:
+For documentation updates, validate:
 
-- cumulative
-- evidence-aware
-- phase-aware
-- handover-ready
-- repository-friendly
-- operationally useful
-
-Progress logs must preserve historical progress.
-
-Handover documents must allow a new chat/session to continue without restarting from zero.
+- progress log remains cumulative
+- current status matches evidence
+- handover reflects latest blockers
+- validation status is not overclaimed
+- review record is created for significant review
+- commit message matches changed files
 
 ---
 
-## 14. Data Safety Principle
+## 10. Final Review Requirements
 
-The project must not expose real sensitive company data.
+Before final approval or commit readiness, provide:
 
-Do not upload or commit:
+```text
+git status
+git diff --stat
+changed files
+validation result, if technical logic changed
+documentation status
+unresolved blocker check
+```
 
-- real customer confidential data
-- real invoice data
-- credentials
-- connection strings
-- API keys
-- `.env` secrets
-- raw production database dumps
-- sensitive internal files
-
-Use masked, sample, or documented structure-only data when needed.
-
----
-
-## 15. Arvizy Usage for This Profile
-
-When Arvizy reviews finance_ops_dev, it must read this project profile together with:
-
-- Core OS files
-- selected agent mode
-- naming registry
-- validation memory
-- blocked patterns
-- semantic model profile
-- dashboard blueprint profile
-- relevant SQL/measure logic/project evidence
-
-If evidence is missing, Arvizy must return:
+If these are missing, Final Review must return:
 
 ```text
 NEEDS REVIEW
@@ -380,21 +209,38 @@ NEEDS REVIEW
 
 ---
 
-## 16. Current Profile Status
+## 11. Validation Memory Update Rule
+
+Update this file when:
+
+- a validation query passes
+- a validation query fails
+- a phase status changes
+- a Power BI implementation validation completes
+- a DAX measure reconciliation completes
+- a major blocker is introduced or resolved
+- Final Review changes the approval status
+
+Each update should include:
+
+- validation area
+- date
+- status
+- evidence
+- next step
+- recheck condition
+
+---
+
+## 12. Status
 
 ```text
-Profile:
-finance_ops_dev
-
 Status:
 ACTIVE
 
-Used for:
-First Arvizy project profile / case study
+Project Profile:
+finance_ops_dev
 
 Framework phase:
-Phase 4 â€” Finance Ops Dev Project Profile Build
+Phase 4 — Finance Ops Dev Project Profile Build
 ```
-
-
-

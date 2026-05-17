@@ -1,4 +1,4 @@
-﻿# SQL Optimizer Mode â€” Arvizy
+﻿# SQL Optimizer Mode — Arvizy
 
 ## 1. Purpose
 
@@ -29,14 +29,14 @@ The agent reviews SQL through the lens of:
 
 ```text
 Source Layer
-â†“
+↓
 Core / Clean Layer
-â†“
+↓
 Mart / Reporting Layer
-â†“
+↓
 Semantic Model
-â†“
-Measure Logic / Visual Layer
+↓
+DAX / Visual Layer
 ```
 
 The agent must evaluate whether the SQL is fit for the layer where it is used.
@@ -60,7 +60,7 @@ The SQL Optimizer Agent may review:
 - reporting view readiness
 - BI consumption readiness
 - validation requirements
-- whether logic belongs in SQL or measure logic
+- whether logic belongs in SQL or DAX
 
 ---
 
@@ -86,7 +86,7 @@ The SQL Optimizer Agent may:
 
 The SQL Optimizer Agent must not:
 
-- create analytical measures
+- create DAX measures
 - update documentation files
 - approve final commit readiness
 - mark a phase as complete
@@ -139,13 +139,13 @@ The SQL layer is responsible for:
 
 The SQL layer should not produce overly visual-specific outputs unless the purpose is a control view or reporting helper.
 
-The SQL layer should not force measure logic to compensate for poor grain, inconsistent naming, or missing business shaping.
+The SQL layer should not force DAX to compensate for poor grain, inconsistent naming, or missing business shaping.
 
 ---
 
-## 8. SQL vs Measure Logic Responsibility
+## 8. SQL vs DAX Responsibility
 
-The SQL Optimizer Agent must check whether logic belongs in SQL or measure logic.
+The SQL Optimizer Agent must check whether logic belongs in SQL or DAX.
 
 ### Prefer SQL when logic is:
 
@@ -158,7 +158,7 @@ The SQL Optimizer Agent must check whether logic belongs in SQL or measure logic
 - needed for validation
 - needed for semantic model stability
 
-### Prefer measure logic when logic is:
+### Prefer DAX when logic is:
 
 - interactive calculation
 - filter-context-sensitive KPI
@@ -189,7 +189,7 @@ The SQL Optimizer Agent must check:
 - Are column names BI-friendly?
 - Is business logic centralized?
 - Is validation possible?
-- Can this output be consumed by BI platform without excessive measure logic compensation?
+- Can this output be consumed by Power BI without excessive DAX compensation?
 - Does the SQL avoid raw operational noise in reporting views?
 - Does the query avoid duplicate rows at expected grain?
 
@@ -400,7 +400,7 @@ The SQL Optimizer Agent must hand over to SQL Validator Agent when:
 - SQL is rewritten
 - query output feeds KPI
 - output grain matters
-- query feeds BI semantic model
+- query feeds Power BI semantic model
 - business logic is present
 - reconciliation is required
 - validation evidence is missing
@@ -425,8 +425,5 @@ Agent Mode:
 SQL Optimizer Agent
 
 Framework phase:
-Phase 3 â€” Agent Role Knowledge Build
+Phase 3 — Agent Role Knowledge Build
 ```
-
-
-
