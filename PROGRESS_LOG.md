@@ -393,7 +393,7 @@ It does not validate fully automated multi-agent orchestration, direct SQL execu
 Status:
 
 ```text
-STARTED
+IN PROGRESS
 ```
 
 Initial deliverable:
@@ -445,18 +445,104 @@ FINAL-001
 
 ---
 
+## Phase 8 Enhancement — Semantic Model / .bim Review
+
+Status:
+
+```text
+COMPLETED
+```
+
+Result:
+
+```text
+PASS
+```
+
+Review record:
+
+```text
+00_docs/review_records/2026_05_17_arvizy_semantic_model_review_enhancement.md
+```
+
+Enhanced files:
+
+```text
+01_core_os/08_agent_output_contract.md
+02_agents/03_measure_optimizer_mode.md
+```
+
+Custom GPT knowledge status:
+
+```text
+Updated and retested.
+```
+
+Quality improvement:
+
+```text
+Previous review quality: 8.3 / 10
+Improved review quality: 9.0 / 10
+```
+
+Summary:
+
+Arvizy was enhanced to improve `.bim` / semantic model review quality from a general prompt.
+
+The enhancement added stronger review coverage for:
+
+```text
+- semantic model structure
+- table role classification
+- relationship coverage
+- slicer / filter path behavior
+- column hygiene and report usability
+- date role clarity
+- control and reconciliation design
+- dashboard page impact
+- priority-based recommendations
+- validation requirements
+```
+
+Retest prompt:
+
+```text
+lakukan review skema, model, relationship, dan apapun untuk mengoptimalkan DAX dan measuresnya
+ini adalah dashboard umum
+```
+
+Retest result:
+
+```text
+SUCCESS
+```
+
+Decision:
+
+```text
+APPROVED FOR CONTROLLED USE
+```
+
+Important limitation:
+
+```text
+The enhanced .bim review can validate model structure and measure definitions, but it still cannot prove data quality, row counts, grain validity, orphan key status, KPI reconciliation, or visual correctness without actual validation output.
+```
+
+---
+
 ## Latest Validation Result
 
 Validation result:
 
 ```text
-CUSTOM GPT SMOKE TEST PASSED
+SEMANTIC MODEL REVIEW ENHANCEMENT PASSED
 ```
 
 Latest structural update:
 
 ```text
-REGRESSION TEST SUITE CREATED
+MEASURE OPTIMIZER AND OUTPUT CONTRACT ENHANCED
 ```
 
 Risk level:
@@ -489,9 +575,11 @@ Planned work:
 - test DAX / Measure Optimizer with more measure scenarios
 - test Documentation Mode with controlled status updates
 - test Final Review with real git evidence
+- consider adding a dedicated semantic model review regression test
+- consider adding model hygiene scoring
 - record repeated weaknesses as blocked patterns or instruction refinements
 - avoid unnecessary instruction bloat
-- keep the repository knowledge aligned with the active Custom GPT configuration
+- keep repository knowledge aligned with active Custom GPT configuration
 
 ---
 

@@ -11,7 +11,7 @@ Phase 8 — Regression Testing / Controlled Usage Expansion
 ## 2. Current Status
 
 ```text
-PHASE 8 STARTED
+PHASE 8 IN PROGRESS
 ```
 
 ---
@@ -98,29 +98,71 @@ Phase Handover Protocol
 
 ---
 
-## 8. Critical Phase 8 Regression Tests
-
-Critical tests required for Phase 8 completion:
+## 8. Phase 8 Completed Enhancement
 
 ```text
-ROUTER-001
-SQL-OPT-001
-SQL-VAL-001
-MEASURE-OPT-001
-DOC-001
-FINAL-001
+Semantic Model / .bim Review Enhancement
 ```
 
-Optional additional tests:
+Status:
 
 ```text
-ROUTER-002
-ROUTER-003
-SQL-OPT-002
-SQL-VAL-002
-MEASURE-OPT-002
-FINAL-002
-HANDOVER-001
+COMPLETED
+```
+
+Result:
+
+```text
+PASS
+```
+
+Review record:
+
+```text
+00_docs/review_records/2026_05_17_arvizy_semantic_model_review_enhancement.md
+```
+
+Quality improvement:
+
+```text
+Previous review quality: 8.3 / 10
+Improved review quality: 9.0 / 10
+```
+
+Decision:
+
+```text
+APPROVED FOR CONTROLLED USE
+```
+
+Enhanced files:
+
+```text
+01_core_os/08_agent_output_contract.md
+02_agents/03_measure_optimizer_mode.md
+```
+
+Knowledge update status:
+
+```text
+Custom GPT knowledge refreshed with updated files.
+```
+
+The enhancement improved Arvizy's ability to review `.bim` / semantic model files from a general user prompt.
+
+The improved review now covers:
+
+```text
+- semantic model structure
+- table role classification
+- relationship coverage
+- slicer / filter path behavior
+- column hygiene and report usability
+- date role clarity
+- control and reconciliation design
+- dashboard page impact
+- priority-based recommendations
+- validation requirements
 ```
 
 ---
@@ -223,7 +265,7 @@ No fully automated regression test runner
 
 ## 15. Recommended Next Step
 
-Run the critical regression tests one by one using the active Arvizy Custom GPT.
+Continue Phase 8 with official regression test execution.
 
 Recommended order:
 
@@ -236,12 +278,13 @@ Recommended order:
 6. FINAL-001
 ```
 
-Each result should be recorded as:
+Optional additional work:
 
 ```text
-PASS
-NEEDS REVISION
-FAIL
+- Add a dedicated .bim semantic model review regression test
+- Add model review scoring rubric
+- Add expected page-level slicer behavior matrix
+- Add optional model hygiene scoring
 ```
 
 ---
@@ -249,7 +292,7 @@ FAIL
 ## 16. Current Decision
 
 ```text
-Arvizy is approved for controlled use and is now entering regression testing.
+Arvizy is approved for controlled use and is actively being expanded through Phase 8 regression testing.
 ```
 
 It is not approved as a fully automated multi-agent runtime.
@@ -275,13 +318,16 @@ Current phase:
 Phase 8 — Regression Testing / Controlled Usage Expansion
 
 Current Phase 8 status:
-STARTED
+IN PROGRESS
 
-Initial Phase 8 deliverable:
-01_core_os/13_regression_test_suite.md
+Latest Phase 8 completed item:
+Semantic Model / .bim Review Enhancement
 
-Readiness score:
-8.5 / 10
+Latest enhancement result:
+PASS
+
+Improved review quality:
+8.3 / 10 → 9.0 / 10
 
 Current decision:
 APPROVED FOR CONTROLLED USE
