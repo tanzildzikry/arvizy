@@ -388,12 +388,75 @@ It does not validate fully automated multi-agent orchestration, direct SQL execu
 
 ---
 
+## Phase 8 — Regression Testing / Controlled Usage Expansion
+
+Status:
+
+```text
+STARTED
+```
+
+Initial deliverable:
+
+```text
+01_core_os/13_regression_test_suite.md
+```
+
+Summary:
+
+Phase 8 was started to make Arvizy more stable for repeated controlled usage.
+
+The regression test suite defines standard tests for:
+
+```text
+Router Mode
+SQL Optimizer Mode
+SQL Validator Mode
+DAX / Measure Optimizer Mode
+Documentation Mode
+Final Review Mode
+Phase Handover Protocol
+```
+
+The objective is to detect whether Arvizy:
+
+```text
+- misroutes requests
+- skips required agents
+- performs work outside the requested mode
+- overclaims readiness
+- approves without evidence
+- creates redundant DAX / measures
+- invents SQL, table names, column names, or validation results
+- updates documentation without sufficient evidence
+- performs Final Review without required inputs
+```
+
+Critical regression tests for Phase 8 completion:
+
+```text
+ROUTER-001
+SQL-OPT-001
+SQL-VAL-001
+MEASURE-OPT-001
+DOC-001
+FINAL-001
+```
+
+---
+
 ## Latest Validation Result
 
 Validation result:
 
 ```text
 CUSTOM GPT SMOKE TEST PASSED
+```
+
+Latest structural update:
+
+```text
+REGRESSION TEST SUITE CREATED
 ```
 
 Risk level:
@@ -418,7 +481,8 @@ Phase 8 — Regression Testing / Controlled Usage Expansion
 
 Planned work:
 
-- create reusable regression test prompts
+- run critical regression tests one by one
+- record regression results
 - test Router Mode across additional request types
 - test SQL Optimizer with actual SQL snippets
 - test SQL Validator with actual validation outputs
@@ -434,7 +498,7 @@ Planned work:
 ## Current Project Status
 
 ```text
-Arvizy is ready for controlled Custom GPT usage.
+Arvizy is ready for controlled Custom GPT usage and has entered regression testing.
 ```
 
 Operational classification:
