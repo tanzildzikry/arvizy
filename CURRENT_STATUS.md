@@ -129,12 +129,6 @@ Previous review quality: 8.3 / 10
 Improved review quality: 9.0 / 10
 ```
 
-Decision:
-
-```text
-APPROVED FOR CONTROLLED USE
-```
-
 Enhanced files:
 
 ```text
@@ -148,26 +142,53 @@ Knowledge update status:
 Custom GPT knowledge refreshed with updated files.
 ```
 
-The enhancement improved Arvizy's ability to review `.bim` / semantic model files from a general user prompt.
+---
 
-The improved review now covers:
+## 9. Phase 8 Regression Suite Update
+
+The regression test suite was expanded with a dedicated semantic model review regression test:
 
 ```text
-- semantic model structure
-- table role classification
-- relationship coverage
-- slicer / filter path behavior
-- column hygiene and report usability
-- date role clarity
-- control and reconciliation design
-- dashboard page impact
-- priority-based recommendations
-- validation requirements
+MEASURE-OPT-003 — General .bim Semantic Model Review
 ```
+
+Updated file:
+
+```text
+01_core_os/13_regression_test_suite.md
+```
+
+Purpose:
+
+```text
+Ensure that Arvizy performs broad semantic model review from a general .bim review prompt.
+```
+
+The test checks whether Arvizy reviews:
+
+```text
+- model inventory
+- table role classification
+- relationship review
+- filter path and slicer behavior
+- measure architecture review
+- DAX / measure risk findings
+- column hygiene and report usability
+- date role review
+- control and reconciliation review
+- dashboard page impact
+- recommended fix priority
+- required validation
+- decision
+- risk level
+- handover to next agent
+```
+
+MEASURE-OPT-003 is now treated as a critical controlled-usage regression test for semantic model review stability.
 
 ---
 
-## 9. Current Repository Structure Status
+## 10. Current Repository Structure Status
 
 Arvizy currently has these completed framework layers:
 
@@ -182,7 +203,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 10. Completed Core OS Files
+## 11. Completed Core OS Files
 
 ```text
 01_core_os/00_master_agent_workflow.md
@@ -197,7 +218,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 11. Completed Agent Mode Files
+## 12. Completed Agent Mode Files
 
 ```text
 02_agents/01_sql_optimizer_mode.md
@@ -210,7 +231,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 12. Completed First Project Profile
+## 13. Completed First Project Profile
 
 ```text
 03_project_profiles/finance_ops_dev/
@@ -231,7 +252,7 @@ dashboard_blueprint_profile.md
 
 ---
 
-## 13. Current Risk Level
+## 14. Current Risk Level
 
 ```text
 LOW for controlled manual / semi-manual use
@@ -245,7 +266,7 @@ MEDIUM if Arvizy is treated as a fully automated multi-agent runtime.
 
 ---
 
-## 14. Current Limitations
+## 15. Current Limitations
 
 Arvizy is ready for controlled Custom GPT usage, but it is not yet a fully automated runtime.
 
@@ -263,33 +284,34 @@ No fully automated regression test runner
 
 ---
 
-## 15. Recommended Next Step
+## 16. Recommended Next Step
 
 Continue Phase 8 with official regression test execution.
 
-Recommended order:
+Recommended critical test order:
 
 ```text
 1. ROUTER-001
 2. SQL-OPT-001
 3. SQL-VAL-001
 4. MEASURE-OPT-001
-5. DOC-001
-6. FINAL-001
+5. MEASURE-OPT-003
+6. DOC-001
+7. FINAL-001
 ```
 
 Optional additional work:
 
 ```text
-- Add a dedicated .bim semantic model review regression test
 - Add model review scoring rubric
 - Add expected page-level slicer behavior matrix
 - Add optional model hygiene scoring
+- Create daily-use prompt templates for Arvizy
 ```
 
 ---
 
-## 16. Current Decision
+## 17. Current Decision
 
 ```text
 Arvizy is approved for controlled use and is actively being expanded through Phase 8 regression testing.
@@ -299,7 +321,7 @@ It is not approved as a fully automated multi-agent runtime.
 
 ---
 
-## 17. Status Summary
+## 18. Status Summary
 
 ```text
 Project:
@@ -321,12 +343,12 @@ Current Phase 8 status:
 IN PROGRESS
 
 Latest Phase 8 completed item:
+Regression suite expanded with MEASURE-OPT-003
+
+Previous Phase 8 completed item:
 Semantic Model / .bim Review Enhancement
 
-Latest enhancement result:
-PASS
-
-Improved review quality:
+Improved .bim review quality:
 8.3 / 10 → 9.0 / 10
 
 Current decision:

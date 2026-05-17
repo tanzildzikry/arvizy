@@ -432,13 +432,14 @@ The objective is to detect whether Arvizy:
 - performs Final Review without required inputs
 ```
 
-Critical regression tests for Phase 8 completion:
+Critical regression tests for Phase 8 completion now include:
 
 ```text
 ROUTER-001
 SQL-OPT-001
 SQL-VAL-001
 MEASURE-OPT-001
+MEASURE-OPT-003
 DOC-001
 FINAL-001
 ```
@@ -531,6 +532,56 @@ The enhanced .bim review can validate model structure and measure definitions, b
 
 ---
 
+## Phase 8 Regression Suite Update — MEASURE-OPT-003
+
+Status:
+
+```text
+COMPLETED
+```
+
+Updated file:
+
+```text
+01_core_os/13_regression_test_suite.md
+```
+
+New regression test:
+
+```text
+MEASURE-OPT-003 — General .bim Semantic Model Review
+```
+
+Purpose:
+
+```text
+Ensure Arvizy performs broad semantic model review from a general .bim review prompt.
+```
+
+Expected coverage:
+
+```text
+- model inventory
+- table role classification
+- relationship review
+- filter path and slicer behavior
+- measure architecture review
+- DAX / measure risk findings
+- column hygiene and report usability
+- date role review
+- control and reconciliation review
+- dashboard page impact
+- recommended fix priority
+- required validation
+- decision
+- risk level
+- handover to next agent
+```
+
+This test is now treated as a critical controlled-usage regression test after the semantic model review enhancement.
+
+---
+
 ## Latest Validation Result
 
 Validation result:
@@ -542,7 +593,7 @@ SEMANTIC MODEL REVIEW ENHANCEMENT PASSED
 Latest structural update:
 
 ```text
-MEASURE OPTIMIZER AND OUTPUT CONTRACT ENHANCED
+REGRESSION SUITE EXPANDED WITH MEASURE-OPT-003
 ```
 
 Risk level:
@@ -575,8 +626,8 @@ Planned work:
 - test DAX / Measure Optimizer with more measure scenarios
 - test Documentation Mode with controlled status updates
 - test Final Review with real git evidence
-- consider adding a dedicated semantic model review regression test
-- consider adding model hygiene scoring
+- consider adding model review scoring rubric
+- consider adding expected page-level slicer behavior matrix
 - record repeated weaknesses as blocked patterns or instruction refinements
 - avoid unnecessary instruction bloat
 - keep repository knowledge aligned with active Custom GPT configuration
