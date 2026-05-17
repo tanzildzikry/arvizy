@@ -1,9 +1,9 @@
-﻿# Current Status â€” Arvizy
+﻿# Current Status — Arvizy
 
 ## 1. Current Phase
 
 ```text
-Phase 7 â€” Agent Packaging / Usage Setup
+Phase 8 — Regression Testing / Controlled Usage Expansion
 ```
 
 ---
@@ -11,7 +11,7 @@ Phase 7 â€” Agent Packaging / Usage Setup
 ## 2. Current Status
 
 ```text
-PHASE 6 COMPLETED / READY FOR PHASE 7
+PHASE 7 COMPLETED / READY FOR CONTROLLED USE
 ```
 
 ---
@@ -19,43 +19,88 @@ PHASE 6 COMPLETED / READY FOR PHASE 7
 ## 3. Latest Completed Phase
 
 ```text
-Phase 6 â€” Simulate and Test Agent Workflow
+Phase 7 — Custom GPT Packaging / Smoke Test
 ```
 
 ---
 
-## 4. Phase 6 Result
+## 4. Phase 7 Result
 
 ```text
 PASS
 ```
 
-Phase 6 tested the manual / semi-manual Arvizy agent workflow using the `finance_ops_dev` project profile.
-
-All primary agent mode simulations passed:
+Readiness score:
 
 ```text
-Router Agent: PASS
-SQL Optimizer Agent: PASS
-SQL Validator Agent: PASS
-Measure Optimizer Agent: PASS
-Documentation Agent: PASS
-Final Review Agent: PASS
+8.5 / 10
+```
+
+Final decision:
+
+```text
+APPROVED FOR CONTROLLED USE
 ```
 
 ---
 
-## 5. Phase 6 Review Record
+## 5. Phase 7 Review Record
 
-Phase 6 simulation result is recorded in:
+Phase 7 smoke test result is recorded in:
 
 ```text
-00_docs/review_records/2026_05_17_arvizy_phase_6_agent_workflow_simulation.md
+00_docs/review_records/2026_05_17_arvizy_phase_7_custom_gpt_smoke_test.md
 ```
 
 ---
 
-## 6. Current Repository Structure Status
+## 6. Phase 7 Summary
+
+Arvizy was configured as a public Custom GPT using the active Arvizy knowledge files.
+
+The Custom GPT was tested as a one-agent multi-mode workflow with the following modes:
+
+```text
+Router Mode
+SQL Optimizer Mode
+SQL Validator Mode
+DAX / Measure Optimizer Mode
+Documentation Mode
+Final Review Mode
+Phase Handover Protocol
+```
+
+A routing issue was identified during testing: Router Mode initially skipped SQL Optimizer Mode when the prompt instructed it not to perform SQL optimization in the current response.
+
+The instruction was enhanced to clarify that Router Mode must distinguish between:
+
+```text
+current-response restrictions
+```
+
+and:
+
+```text
+recommended future workflow sequence
+```
+
+After the instruction enhancement, the Router workflow passed.
+
+---
+
+## 7. Phase 7 Smoke Test Results
+
+```text
+Router Retest: PASS
+DAX / Measure Optimizer Test: PASS
+SQL Optimizer Test: PASS
+SQL Validator Test: PASS
+Final Review Test: PASS
+```
+
+---
+
+## 8. Current Repository Structure Status
 
 Arvizy currently has these completed framework layers:
 
@@ -70,7 +115,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 7. Completed Core OS Files
+## 9. Completed Core OS Files
 
 ```text
 01_core_os/00_master_agent_workflow.md
@@ -84,7 +129,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 8. Completed Agent Mode Files
+## 10. Completed Agent Mode Files
 
 ```text
 02_agents/01_sql_optimizer_mode.md
@@ -95,9 +140,15 @@ Arvizy currently has these completed framework layers:
 02_agents/06_phase_handover_protocol.md
 ```
 
+Note:
+
+```text
+The active Custom GPT may still use DAX / Measure Optimizer terminology depending on the uploaded knowledge package and instruction wording.
+```
+
 ---
 
-## 9. Completed First Project Profile
+## 11. Completed First Project Profile
 
 ```text
 03_project_profiles/finance_ops_dev/
@@ -118,72 +169,34 @@ dashboard_blueprint_profile.md
 
 ---
 
-## 10. Completed Templates
-
-```text
-04_templates/review_record_template.md
-04_templates/agent_handover_template.md
-04_templates/phase_handover_template.md
-04_templates/project_profile_template/
-```
-
----
-
-## 11. Completed Example Workflow
-
-```text
-05_examples/finance_ops_dev_phase_12_review/
-```
-
-This example demonstrates a simulated full Arvizy review workflow for:
-
-```text
-finance_ops_dev Phase 12 â€” BI Semantic Model Readiness
-```
-
----
-
 ## 12. Current Risk Level
 
 ```text
-LOW
+LOW for controlled manual / semi-manual use
 ```
-
-Reason:
-
-- Arvizy structure is complete for manual workflow usage.
-- Core OS files are created.
-- Agent mode files are created.
-- Finance Ops Dev project profile is created.
-- Reusable templates are created.
-- Example workflow is created.
-- Phase 6 simulation passed for all primary agent modes.
 
 Remaining risk:
 
 ```text
-MEDIUM if users treat examples or simulations as real project validation evidence.
+MEDIUM if Arvizy is treated as a fully automated multi-agent runtime.
 ```
 
 ---
 
 ## 13. Current Limitations
 
-Arvizy currently does not include:
+Arvizy is currently ready for controlled Custom GPT usage, but it is not yet a fully automated runtime.
 
-- automated agent runner
-- MCP integration
-- API-based orchestration
-- direct SQL execution
-- direct repository write automation
-- real database validation
-- live BI platform model validation
-- autonomous multi-agent execution
-
-Current workflow is:
+Current limitations:
 
 ```text
-Manual / semi-manual with ChatGPT Plus or similar agent environment.
+No automated orchestration
+No direct SQL execution
+No direct repository write automation
+No direct BI platform validation
+No persistent shared memory across independent agents
+No automated evidence collection
+No fully automated regression test runner
 ```
 
 ---
@@ -191,30 +204,32 @@ Manual / semi-manual with ChatGPT Plus or similar agent environment.
 ## 14. Recommended Next Phase
 
 ```text
-Phase 7 â€” Agent Packaging / Usage Setup
+Phase 8 — Regression Testing / Controlled Usage Expansion
 ```
 
-Recommended Phase 7 work:
+Recommended Phase 8 work:
 
-- decide packaging model:
-  - one Custom GPT with multiple modes
-  - multiple Custom GPTs by agent mode
-  - manual ChatGPT Plus workflow
-  - future API/MCP runner
-- define required knowledge files per agent
-- define agent setup configuration
-- define operating procedure for real project usage
-- define how Arvizy should be invoked for future dashboard reviews
+```text
+- Create reusable regression test prompts
+- Test Router Mode on more request categories
+- Test SQL Optimizer on actual SQL snippets
+- Test SQL Validator with real validation outputs
+- Test DAX / Measure Optimizer on existing measure scenarios
+- Test Documentation Mode on controlled status updates
+- Test Final Review with real git evidence
+- Record known weaknesses and blocked patterns
+- Refine knowledge files only when repeated behavior issues appear
+```
 
 ---
 
 ## 15. Current Decision
 
 ```text
-Arvizy is ready for controlled manual workflow usage and Phase 7 packaging design.
+Arvizy is approved for controlled use as a Custom GPT workflow.
 ```
 
-It is not yet an automated agent system.
+It is not approved as a fully automated multi-agent runtime.
 
 ---
 
@@ -228,17 +243,17 @@ Repository:
 Public
 
 Current maturity:
-Manual / semi-manual agent workflow framework
+Controlled Custom GPT / manual-semi-manual agent workflow
 
 Latest completed phase:
-Phase 6 â€” Simulate and Test Agent Workflow
+Phase 7 — Custom GPT Packaging / Smoke Test
 
 Current phase:
-Phase 7 â€” Agent Packaging / Usage Setup
+Phase 8 — Regression Testing / Controlled Usage Expansion
 
-Next objective:
-Define how Arvizy should be packaged and used repeatedly.
+Readiness score:
+8.5 / 10
+
+Decision:
+APPROVED FOR CONTROLLED USE
 ```
-
-
-
