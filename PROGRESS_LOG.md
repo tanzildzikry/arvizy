@@ -582,6 +582,50 @@ This test is now treated as a critical controlled-usage regression test after th
 
 ---
 
+## Phase 8 Daily-Use Prompt Templates
+
+Status:
+
+```text
+COMPLETED
+```
+
+Created file:
+
+```text
+04_templates/arvizy_prompt_templates.md
+```
+
+Purpose:
+
+```text
+Standardize daily Arvizy usage prompts across Router, SQL Optimizer, SQL Validator, DAX / Measure Optimizer, semantic model review, Documentation, Final Review, Phase Handover, and Git evidence workflows.
+```
+
+Included prompt categories:
+
+```text
+Router Mode prompts
+SQL Optimizer prompts
+SQL Validator prompts
+DAX / Measure Optimizer prompts
+.bim / Semantic Model Review prompts
+Documentation Mode prompts
+Final Review prompts
+Phase Handover prompts
+Git evidence collection prompt
+Recommended daily workflow patterns
+```
+
+Impact:
+
+```text
+Controlled usage becomes easier and less dependent on manually reconstructing prompts.
+Prompt drift risk is reduced.
+```
+
+---
+
 ## Latest Validation Result
 
 Validation result:
@@ -593,7 +637,7 @@ SEMANTIC MODEL REVIEW ENHANCEMENT PASSED
 Latest structural update:
 
 ```text
-REGRESSION SUITE EXPANDED WITH MEASURE-OPT-003
+DAILY-USE PROMPT TEMPLATES CREATED
 ```
 
 Risk level:
@@ -628,6 +672,7 @@ Planned work:
 - test Final Review with real git evidence
 - consider adding model review scoring rubric
 - consider adding expected page-level slicer behavior matrix
+- create dedicated usage guide for prompt templates if needed
 - record repeated weaknesses as blocked patterns or instruction refinements
 - avoid unnecessary instruction bloat
 - keep repository knowledge aligned with active Custom GPT configuration

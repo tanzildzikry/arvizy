@@ -164,31 +164,50 @@ Purpose:
 Ensure that Arvizy performs broad semantic model review from a general .bim review prompt.
 ```
 
-The test checks whether Arvizy reviews:
-
-```text
-- model inventory
-- table role classification
-- relationship review
-- filter path and slicer behavior
-- measure architecture review
-- DAX / measure risk findings
-- column hygiene and report usability
-- date role review
-- control and reconciliation review
-- dashboard page impact
-- recommended fix priority
-- required validation
-- decision
-- risk level
-- handover to next agent
-```
-
 MEASURE-OPT-003 is now treated as a critical controlled-usage regression test for semantic model review stability.
 
 ---
 
-## 10. Current Repository Structure Status
+## 10. Phase 8 Daily-Use Prompt Templates
+
+A daily-use prompt template library has been created:
+
+```text
+04_templates/arvizy_prompt_templates.md
+```
+
+Status:
+
+```text
+COMPLETED
+```
+
+Purpose:
+
+```text
+Standardize daily Arvizy usage prompts across Router, SQL Optimizer, SQL Validator, DAX / Measure Optimizer, semantic model review, Documentation, Final Review, and Phase Handover workflows.
+```
+
+The prompt template library includes:
+
+```text
+- Router Mode prompts
+- SQL Optimizer prompts
+- SQL Validator prompts
+- DAX / Measure Optimizer prompts
+- .bim / Semantic Model Review prompts
+- Documentation Mode prompts
+- Final Review prompts
+- Phase Handover prompts
+- Git evidence collection prompt
+- Recommended daily workflow patterns
+```
+
+This improves controlled usage consistency and reduces prompt drift.
+
+---
+
+## 11. Current Repository Structure Status
 
 Arvizy currently has these completed framework layers:
 
@@ -203,7 +222,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 11. Completed Core OS Files
+## 12. Completed Core OS Files
 
 ```text
 01_core_os/00_master_agent_workflow.md
@@ -218,7 +237,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 12. Completed Agent Mode Files
+## 13. Completed Agent Mode Files
 
 ```text
 02_agents/01_sql_optimizer_mode.md
@@ -231,7 +250,19 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 13. Completed First Project Profile
+## 14. Completed Templates
+
+```text
+04_templates/review_record_template.md
+04_templates/agent_handover_template.md
+04_templates/phase_handover_template.md
+04_templates/arvizy_prompt_templates.md
+04_templates/project_profile_template/
+```
+
+---
+
+## 15. Completed First Project Profile
 
 ```text
 03_project_profiles/finance_ops_dev/
@@ -252,7 +283,7 @@ dashboard_blueprint_profile.md
 
 ---
 
-## 14. Current Risk Level
+## 16. Current Risk Level
 
 ```text
 LOW for controlled manual / semi-manual use
@@ -266,7 +297,7 @@ MEDIUM if Arvizy is treated as a fully automated multi-agent runtime.
 
 ---
 
-## 15. Current Limitations
+## 17. Current Limitations
 
 Arvizy is ready for controlled Custom GPT usage, but it is not yet a fully automated runtime.
 
@@ -284,7 +315,7 @@ No fully automated regression test runner
 
 ---
 
-## 16. Recommended Next Step
+## 18. Recommended Next Step
 
 Continue Phase 8 with official regression test execution.
 
@@ -306,12 +337,12 @@ Optional additional work:
 - Add model review scoring rubric
 - Add expected page-level slicer behavior matrix
 - Add optional model hygiene scoring
-- Create daily-use prompt templates for Arvizy
+- Create dedicated usage guide for prompt templates
 ```
 
 ---
 
-## 17. Current Decision
+## 19. Current Decision
 
 ```text
 Arvizy is approved for controlled use and is actively being expanded through Phase 8 regression testing.
@@ -321,7 +352,7 @@ It is not approved as a fully automated multi-agent runtime.
 
 ---
 
-## 18. Status Summary
+## 20. Status Summary
 
 ```text
 Project:
@@ -343,10 +374,14 @@ Current Phase 8 status:
 IN PROGRESS
 
 Latest Phase 8 completed item:
-Regression suite expanded with MEASURE-OPT-003
+Daily-use prompt templates created
 
-Previous Phase 8 completed item:
-Semantic Model / .bim Review Enhancement
+Latest file added:
+04_templates/arvizy_prompt_templates.md
+
+Previous Phase 8 completed items:
+- Semantic Model / .bim Review Enhancement
+- Regression suite expanded with MEASURE-OPT-003
 
 Improved .bim review quality:
 8.3 / 10 → 9.0 / 10
