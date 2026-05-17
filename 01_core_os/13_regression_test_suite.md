@@ -551,6 +551,95 @@ NEEDS REVIEW
 
 ---
 
+## MEASURE-OPT-003 — General .bim Semantic Model Review
+
+### Mode
+
+```text
+DAX / Measure Optimizer Mode
+```
+
+### Prompt
+
+```text
+lakukan review skema, model, relationship, dan apapun untuk mengoptimalkan DAX dan measuresnya
+ini adalah dashboard umum
+```
+
+### Required Artifact
+
+```text
+A .bim file or semantic model export must be provided.
+```
+
+### Expected Behavior
+
+Arvizy must perform a broader semantic model review, not only a narrow DAX / measure review.
+
+The output should include or clearly cover:
+
+```text
+- model inventory
+- table role classification
+- relationship review
+- filter path and slicer behavior
+- measure architecture review
+- DAX / measure risk findings
+- column hygiene and report usability
+- date role review
+- control and reconciliation review
+- dashboard page impact
+- recommended fix priority
+- required validation
+- decision
+- risk level
+- handover to next agent
+```
+
+### Expected Decision
+
+The safest common decision should be one of:
+
+```text
+PASS STRUCTURE ONLY
+NEEDS REVIEW
+NEEDS REVISION
+```
+
+The agent must not return full `APPROVED` unless actual validation evidence is provided.
+
+### Pass Condition
+
+- Agent reviews table roles, not only measures.
+- Agent reviews relationships and expected slicer/filter behavior.
+- Agent identifies whether control tables are disconnected or risky.
+- Agent reviews column hygiene, including visible technical fields and non-additive numeric columns.
+- Agent reviews date role clarity, including snapshot/current/date-slicer behavior.
+- Agent identifies DAX / measure risks such as:
+  - COUNTROWS vs DISTINCTCOUNT grain dependency
+  - hardcoded filters
+  - SUM over pre-filtered amount columns
+  - control table MAX() risk
+  - broad filter removal risk if present
+- Agent provides priority-based recommendations.
+- Agent requires validation for grain, key uniqueness, orphan keys, row counts, KPI reconciliation, relationship behavior, and visual behavior.
+- Agent does not claim final model approval based on `.bim` structure alone.
+- Agent hands over to SQL Validator or Final Review only when appropriate.
+
+### Fail Condition
+
+- Agent only reviews DAX and ignores model structure.
+- Agent ignores relationships or slicer behavior.
+- Agent ignores column hygiene and report usability.
+- Agent ignores date role ambiguity.
+- Agent treats `.bim` structure as full validation evidence.
+- Agent approves model readiness without SQL/database validation or KPI reconciliation.
+- Agent recommends relationship changes as final without classifying whether the issue is a true model gap, acceptable by design, page-specific, or validation-dependent.
+- Agent creates copy-paste-ready DAX using unconfirmed or unnecessary logic.
+- Agent creates redundant by-dimension measures.
+
+---
+
 # 9. Documentation Regression Tests
 
 ## DOC-001 — Phase Status Without Full Evidence
@@ -821,6 +910,7 @@ Critical regression tests pass:
 - SQL-OPT-001
 - SQL-VAL-001
 - MEASURE-OPT-001
+- MEASURE-OPT-003
 - DOC-001
 - FINAL-001
 ```
@@ -829,6 +919,8 @@ Optional completion target:
 
 ```text
 All regression tests pass or have documented exceptions.
+
+For `.bim` / semantic model review stability, MEASURE-OPT-003 should be treated as a critical controlled-usage test after semantic model review enhancement.
 ```
 
 Phase 8 must not be marked complete if:
