@@ -11,7 +11,7 @@ Phase 8 — Regression Testing / Controlled Usage Expansion
 ## 2. Current Status
 
 ```text
-PHASE 8 IN PROGRESS
+PHASE 8 CRITICAL REGRESSION TESTING COMPLETED
 ```
 
 ---
@@ -188,26 +188,75 @@ Purpose:
 Standardize daily Arvizy usage prompts across Router, SQL Optimizer, SQL Validator, DAX / Measure Optimizer, semantic model review, Documentation, Final Review, and Phase Handover workflows.
 ```
 
-The prompt template library includes:
+---
+
+## 11. Phase 8 Critical Regression Test
+
+The official Phase 8 critical regression test has been completed.
+
+Review record:
 
 ```text
-- Router Mode prompts
-- SQL Optimizer prompts
-- SQL Validator prompts
-- DAX / Measure Optimizer prompts
-- .bim / Semantic Model Review prompts
-- Documentation Mode prompts
-- Final Review prompts
-- Phase Handover prompts
-- Git evidence collection prompt
-- Recommended daily workflow patterns
+00_docs/review_records/2026_05_18_arvizy_phase_8_critical_regression_test.md
 ```
 
-This improves controlled usage consistency and reduces prompt drift.
+Status:
+
+```text
+COMPLETED
+```
+
+Overall result:
+
+```text
+PASS
+```
+
+Decision:
+
+```text
+APPROVED FOR CONTROLLED USE
+```
+
+Critical tests passed:
+
+```text
+ROUTER-001: PASS
+SQL-OPT-001: PASS
+SQL-VAL-001: PASS
+MEASURE-OPT-001: PASS
+MEASURE-OPT-003: PASS
+DOC-001: PASS
+FINAL-001: PASS
+```
+
+What this proves:
+
+```text
+- Router Mode correctly routes multi-layer semantic model readiness requests.
+- SQL Optimizer Mode preserves scope when no SQL is provided.
+- SQL Validator Mode refuses validation approval without actual SQL output.
+- DAX / Measure Optimizer Mode blocks redundant by-dimension measures.
+- DAX / Measure Optimizer Mode performs broad .bim semantic model review from a general prompt.
+- Documentation Mode avoids overclaiming phase status without full evidence.
+- Final Review Mode refuses commit approval without Git and validation evidence.
+```
+
+What this does not prove:
+
+```text
+- automated orchestration
+- direct SQL execution
+- direct BI platform validation
+- direct repository write automation
+- persistent shared memory across independent agents
+- automated evidence collection
+- fully automated regression runner capability
+```
 
 ---
 
-## 11. Current Repository Structure Status
+## 12. Current Repository Structure Status
 
 Arvizy currently has these completed framework layers:
 
@@ -222,7 +271,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 12. Completed Core OS Files
+## 13. Completed Core OS Files
 
 ```text
 01_core_os/00_master_agent_workflow.md
@@ -237,7 +286,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 13. Completed Agent Mode Files
+## 14. Completed Agent Mode Files
 
 ```text
 02_agents/01_sql_optimizer_mode.md
@@ -250,7 +299,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 14. Completed Templates
+## 15. Completed Templates
 
 ```text
 04_templates/review_record_template.md
@@ -262,7 +311,7 @@ Arvizy currently has these completed framework layers:
 
 ---
 
-## 15. Completed First Project Profile
+## 16. Completed First Project Profile
 
 ```text
 03_project_profiles/finance_ops_dev/
@@ -283,7 +332,7 @@ dashboard_blueprint_profile.md
 
 ---
 
-## 16. Current Risk Level
+## 17. Current Risk Level
 
 ```text
 LOW for controlled manual / semi-manual use
@@ -297,7 +346,7 @@ MEDIUM if Arvizy is treated as a fully automated multi-agent runtime.
 
 ---
 
-## 17. Current Limitations
+## 18. Current Limitations
 
 Arvizy is ready for controlled Custom GPT usage, but it is not yet a fully automated runtime.
 
@@ -315,44 +364,38 @@ No fully automated regression test runner
 
 ---
 
-## 18. Recommended Next Step
+## 19. Recommended Next Step
 
-Continue Phase 8 with official regression test execution.
+Phase 8 critical regression testing is complete.
 
-Recommended critical test order:
+Recommended next options:
 
 ```text
-1. ROUTER-001
-2. SQL-OPT-001
-3. SQL-VAL-001
-4. MEASURE-OPT-001
-5. MEASURE-OPT-003
-6. DOC-001
-7. FINAL-001
+Option A — Add optional regression tests for edge cases.
+Option B — Create semantic model scoring rubric.
+Option C — Add expected page-level slicer behavior matrix.
+Option D — Begin controlled real-project usage and record issues as blocked patterns.
 ```
 
-Optional additional work:
+Recommended next direction:
 
 ```text
-- Add model review scoring rubric
-- Add expected page-level slicer behavior matrix
-- Add optional model hygiene scoring
-- Create dedicated usage guide for prompt templates
+Begin controlled real-project usage and record repeated issues as blocked patterns or future regression cases.
 ```
 
 ---
 
-## 19. Current Decision
+## 20. Current Decision
 
 ```text
-Arvizy is approved for controlled use and is actively being expanded through Phase 8 regression testing.
+Arvizy is approved for controlled use after passing Phase 8 critical regression testing.
 ```
 
 It is not approved as a fully automated multi-agent runtime.
 
 ---
 
-## 20. Status Summary
+## 21. Status Summary
 
 ```text
 Project:
@@ -371,20 +414,16 @@ Current phase:
 Phase 8 — Regression Testing / Controlled Usage Expansion
 
 Current Phase 8 status:
-IN PROGRESS
+CRITICAL REGRESSION TESTING COMPLETED
 
 Latest Phase 8 completed item:
-Daily-use prompt templates created
+Critical regression test execution
 
-Latest file added:
-04_templates/arvizy_prompt_templates.md
+Latest review record:
+00_docs/review_records/2026_05_18_arvizy_phase_8_critical_regression_test.md
 
-Previous Phase 8 completed items:
-- Semantic Model / .bim Review Enhancement
-- Regression suite expanded with MEASURE-OPT-003
-
-Improved .bim review quality:
-8.3 / 10 → 9.0 / 10
+Critical regression result:
+PASS
 
 Current decision:
 APPROVED FOR CONTROLLED USE
