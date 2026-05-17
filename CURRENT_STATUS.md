@@ -3,7 +3,7 @@
 ## 1. Current Phase
 
 ```text
-Phase 5 — Review Record System and Example Workflow Completed
+Phase 7 — Agent Packaging / Usage Setup
 ```
 
 ---
@@ -11,27 +11,53 @@ Phase 5 — Review Record System and Example Workflow Completed
 ## 2. Current Status
 
 ```text
-STRUCTURE READY / MANUAL WORKFLOW READY
+PHASE 6 COMPLETED / READY FOR PHASE 7
 ```
 
 ---
 
-## 3. Latest Completed Work
+## 3. Latest Completed Phase
 
-Arvizy now has the initial reusable folder structure and knowledge base for manual / semi-manual agent workflow usage.
-
-Completed components:
-
-- `00_docs`
-- `01_core_os`
-- `02_agents`
-- `03_project_profiles/finance_ops_dev`
-- `04_templates`
-- `05_examples/finance_ops_dev_phase_12_review`
+```text
+Phase 6 — Simulate and Test Agent Workflow
+```
 
 ---
 
-## 4. Completed Structure
+## 4. Phase 6 Result
+
+```text
+PASS
+```
+
+Phase 6 tested the manual / semi-manual Arvizy agent workflow using the `finance_ops_dev` project profile.
+
+All primary agent mode simulations passed:
+
+```text
+Router Agent: PASS
+SQL Optimizer Agent: PASS
+SQL Validator Agent: PASS
+DAX Optimizer Agent: PASS
+Documentation Agent: PASS
+Final Review Agent: PASS
+```
+
+---
+
+## 5. Phase 6 Review Record
+
+Phase 6 simulation result is recorded in:
+
+```text
+00_docs/review_records/2026_05_17_arvizy_phase_6_agent_workflow_simulation.md
+```
+
+---
+
+## 6. Current Repository Structure Status
+
+Arvizy currently has these completed framework layers:
 
 ```text
 00_docs/
@@ -44,7 +70,7 @@ Completed components:
 
 ---
 
-## 5. Completed Core OS Files
+## 7. Completed Core OS Files
 
 ```text
 01_core_os/00_master_agent_workflow.md
@@ -58,7 +84,7 @@ Completed components:
 
 ---
 
-## 6. Completed Agent Mode Files
+## 8. Completed Agent Mode Files
 
 ```text
 02_agents/01_sql_optimizer_mode.md
@@ -71,7 +97,7 @@ Completed components:
 
 ---
 
-## 7. Completed First Project Profile
+## 9. Completed First Project Profile
 
 ```text
 03_project_profiles/finance_ops_dev/
@@ -92,7 +118,7 @@ dashboard_blueprint_profile.md
 
 ---
 
-## 8. Completed Templates
+## 10. Completed Templates
 
 ```text
 04_templates/review_record_template.md
@@ -103,7 +129,7 @@ dashboard_blueprint_profile.md
 
 ---
 
-## 9. Completed Example Workflow
+## 11. Completed Example Workflow
 
 ```text
 05_examples/finance_ops_dev_phase_12_review/
@@ -115,11 +141,9 @@ This example demonstrates a simulated full Arvizy review workflow for:
 finance_ops_dev Phase 12 — Power BI Semantic Model Readiness
 ```
 
-The example uses conservative status wording and does not claim full real-project validation.
-
 ---
 
-## 10. Current Risk Level
+## 12. Current Risk Level
 
 ```text
 LOW
@@ -127,22 +151,23 @@ LOW
 
 Reason:
 
-- folder structure is complete
-- core OS rules are documented
-- agent mode instructions are available
-- finance_ops_dev project profile exists
-- reusable templates exist
-- example review workflow exists
+- Arvizy structure is complete for manual workflow usage.
+- Core OS files are created.
+- Agent mode files are created.
+- Finance Ops Dev project profile is created.
+- Reusable templates are created.
+- Example workflow is created.
+- Phase 6 simulation passed for all primary agent modes.
 
 Remaining risk:
 
 ```text
-MEDIUM if users treat example files as real validation evidence.
+MEDIUM if users treat examples or simulations as real project validation evidence.
 ```
 
 ---
 
-## 11. Current Limitations
+## 13. Current Limitations
 
 Arvizy currently does not include:
 
@@ -153,6 +178,7 @@ Arvizy currently does not include:
 - direct GitHub write automation
 - real database validation
 - live Power BI model validation
+- autonomous multi-agent execution
 
 Current workflow is:
 
@@ -162,33 +188,37 @@ Manual / semi-manual with ChatGPT Plus or similar agent environment.
 
 ---
 
-## 12. Recommended Next Phase
+## 14. Recommended Next Phase
 
 ```text
-Phase 6 — Simulate and Test Agent Workflow
+Phase 7 — Agent Packaging / Usage Setup
 ```
 
-Recommended next work:
+Recommended Phase 7 work:
 
-- run test scenarios from `01_core_os/10_agent_test_scenarios.md`
-- validate each agent mode behavior
-- review whether instructions are too long, too rigid, or missing guardrails
-- create first actual review record under `00_docs/review_records/`
-- refine Core OS or Agent Mode files based on simulation results
+- decide packaging model:
+  - one Custom GPT with multiple modes
+  - multiple Custom GPTs by agent mode
+  - manual ChatGPT Plus workflow
+  - future API/MCP runner
+- define required knowledge files per agent
+- define agent setup configuration
+- define operating procedure for real project usage
+- define how Arvizy should be invoked for future dashboard reviews
 
 ---
 
-## 13. Current Decision
+## 15. Current Decision
 
 ```text
-Arvizy is ready for manual workflow simulation.
+Arvizy is ready for controlled manual workflow usage and Phase 7 packaging design.
 ```
 
 It is not yet an automated agent system.
 
 ---
 
-## 14. Status Summary
+## 16. Status Summary
 
 ```text
 Project:
@@ -200,8 +230,12 @@ Public
 Current maturity:
 Manual / semi-manual agent workflow framework
 
+Latest completed phase:
+Phase 6 — Simulate and Test Agent Workflow
+
 Current phase:
-Phase 5 completed
-Next phase:
-Phase 6 — Simulation and Test
+Phase 7 — Agent Packaging / Usage Setup
+
+Next objective:
+Define how Arvizy should be packaged and used repeatedly.
 ```

@@ -240,12 +240,72 @@ and does not claim full real-project validation.
 
 ---
 
+## Phase 6 — Simulate and Test Agent Workflow
+
+Status:
+
+```text
+COMPLETED
+```
+
+Result:
+
+```text
+PASS
+```
+
+Summary:
+
+Phase 6 tested whether Arvizy agent modes can operate according to:
+
+- Core OS
+- Router Mode
+- Agent Output Contract
+- Evidence Policy
+- Conflict Resolution Rules
+- Agent Mode files
+- finance_ops_dev project profile
+
+Simulation was performed using the public Arvizy repository and ChatGPT-based manual / semi-manual workflow.
+
+Completed simulations:
+
+```text
+Router Agent: PASS
+SQL Optimizer Agent: PASS
+SQL Validator Agent: PASS
+DAX Optimizer Agent: PASS
+Documentation Agent: PASS
+Final Review Agent: PASS
+```
+
+Review record:
+
+```text
+00_docs/review_records/2026_05_17_arvizy_phase_6_agent_workflow_simulation.md
+```
+
+Key validation result:
+
+```text
+MANUAL WORKFLOW SIMULATION PASSED
+```
+
+Important limitation:
+
+```text
+Phase 6 validates manual / semi-manual workflow behavior only.
+It does not validate automated runner, MCP runtime, API orchestration, direct SQL execution, direct GitHub automation, or real Power BI model validation.
+```
+
+---
+
 ## Latest Validation Result
 
 Validation result:
 
 ```text
-STRUCTURE READY
+MANUAL WORKFLOW SIMULATION PASSED
 ```
 
 Risk level:
@@ -262,28 +322,28 @@ Manual / semi-manual workflow only. No automated runtime yet.
 
 ---
 
-## Next Phase
+## Current Phase
 
 ```text
-Phase 6 — Simulate and Test Agent Workflow
+Phase 7 — Agent Packaging / Usage Setup
 ```
 
 Planned work:
 
-- test Router Mode
-- test SQL Optimizer Mode
-- test SQL Validator Mode
-- test DAX Optimizer Mode
-- test Documentation Mode
-- test Final Review Mode
-- record simulation result
-- refine agent instructions if needed
-- create first actual review record under `00_docs/review_records/`
+- decide whether Arvizy should be packaged as:
+  - one Custom GPT with multiple modes
+  - multiple Custom GPTs by agent mode
+  - manual ChatGPT Plus workflow
+  - future API/MCP runner
+- define knowledge files required for each agent
+- define operating procedure for real project usage
+- define repeatable invocation prompts
+- define what should remain manual before automation
 
 ---
 
 ## Current Project Status
 
 ```text
-Arvizy is ready for manual workflow simulation.
+Arvizy is ready for controlled manual workflow usage and Phase 7 packaging design.
 ```
