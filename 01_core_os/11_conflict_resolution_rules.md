@@ -1,4 +1,4 @@
-# Conflict Resolution Rules — Arvizy
+﻿# Conflict Resolution Rules â€” Arvizy
 
 ## 1. Purpose
 
@@ -42,7 +42,7 @@ Use this source priority when resolving conflicts.
 ```text
 1. Latest direct validation result
 2. Latest SQL/database output
-3. Latest semantic model export or .bim file
+3. Latest semantic model export or semantic model export file
 4. Latest explicit user-provided evidence
 5. 00_validation_memory.md
 6. 00_decision_log.md
@@ -167,7 +167,7 @@ unless implementation-level validation evidence exists.
 
 If naming registry conflicts with direct source evidence, such as:
 
-- latest `.bim`
+- latest `semantic model export`
 - latest SQL view definition
 - latest `information_schema`
 - latest user-provided schema output
@@ -369,5 +369,8 @@ Applies to:
 All Arvizy agent modes
 
 Framework phase:
-Phase 2 — Core OS Knowledge Build
+Phase 2 â€” Core OS Knowledge Build
 ```
+
+
+

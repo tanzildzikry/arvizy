@@ -1,8 +1,8 @@
-# Arvizy
+﻿# Arvizy
 
 Arvizy is a reusable dashboard optimizer agent operating system for BI analytics projects.
 
-It is designed to structure, review, validate, and document dashboard development workflows through specialized agent modes for SQL optimization, SQL validation, DAX optimization, documentation management, phase handover, and final review.
+It is designed to structure, review, validate, and document dashboard development workflows through specialized agent modes for SQL optimization, SQL validation, measure optimization, documentation management, phase handover, and final review.
 
 ---
 
@@ -12,7 +12,7 @@ Arvizy helps BI and analytics projects maintain:
 
 - clear SQL layer responsibility
 - stable semantic model design
-- controlled DAX measure development
+- controlled analytical measure development
 - validation-first workflow
 - documentation consistency
 - phase handover continuity
@@ -51,7 +51,7 @@ Arvizy currently defines these manual / semi-manual agent modes:
 - Router Agent
 - SQL Optimizer Agent
 - SQL Validator Agent
-- DAX Optimizer Agent
+- Measure Optimizer Agent
 - Documentation Agent
 - Final Review Agent
 - Phase Handover Protocol
@@ -62,74 +62,74 @@ Arvizy currently defines these manual / semi-manual agent modes:
 
 ```text
 arvizy/
-│
-├── 00_docs/
-│   ├── architecture/
-│   │   └── arvizy_architecture.md
-│   ├── concept/
-│   │   └── arvizy_concept.md
-│   ├── review_records/
-│   │   ├── .gitkeep
-│   │   └── README.md
-│   └── usage_guides/
-│       └── chatgpt_plus_usage_guide.md
-│
-├── 01_core_os/
-│   ├── 00_master_agent_workflow.md
-│   ├── 07_router_mode.md
-│   ├── 08_agent_output_contract.md
-│   ├── 09_review_record_template.md
-│   ├── 10_agent_test_scenarios.md
-│   ├── 11_conflict_resolution_rules.md
-│   └── 12_evidence_policy.md
-│
-├── 02_agents/
-│   ├── 01_sql_optimizer_mode.md
-│   ├── 02_sql_validator_mode.md
-│   ├── 03_dax_optimizer_mode.md
-│   ├── 04_documentation_mode.md
-│   ├── 05_final_review_mode.md
-│   └── 06_phase_handover_protocol.md
-│
-├── 03_project_profiles/
-│   └── finance_ops_dev/
-│       ├── 00_blocked_patterns.md
-│       ├── 00_decision_log.md
-│       ├── 00_naming_registry.md
-│       ├── 00_project_memory.md
-│       ├── 00_validation_memory.md
-│       ├── 13_powerbi_implementation_drift_checklist.md
-│       ├── dashboard_blueprint_profile.md
-│       └── semantic_model_profile.md
-│
-├── 04_templates/
-│   ├── agent_handover_template.md
-│   ├── phase_handover_template.md
-│   ├── review_record_template.md
-│   └── project_profile_template/
-│       ├── 00_blocked_patterns.md
-│       ├── 00_decision_log.md
-│       ├── 00_naming_registry.md
-│       ├── 00_project_memory.md
-│       ├── 00_validation_memory.md
-│       ├── dashboard_blueprint_profile.md
-│       └── semantic_model_profile.md
-│
-├── 05_examples/
-│   └── finance_ops_dev_phase_12_review/
-│       ├── .gitkeep
-│       ├── README.md
-│       ├── phase_12_review_record.md
-│       ├── sql_optimizer_handover.md
-│       ├── sql_validator_handover.md
-│       ├── dax_optimizer_handover.md
-│       ├── documentation_handover.md
-│       └── final_review_output.md
-│
-├── CURRENT_STATUS.md
-├── PROGRESS_LOG.md
-├── PROJECT_SCOPE.md
-└── README.md
+â”‚
+â”œâ”€â”€ 00_docs/
+â”‚   â”œâ”€â”€ architecture/
+â”‚   â”‚   â””â”€â”€ arvizy_architecture.md
+â”‚   â”œâ”€â”€ concept/
+â”‚   â”‚   â””â”€â”€ arvizy_concept.md
+â”‚   â”œâ”€â”€ review_records/
+â”‚   â”‚   â”œâ”€â”€ .gitkeep
+â”‚   â”‚   â””â”€â”€ README.md
+â”‚   â””â”€â”€ usage_guides/
+â”‚       â””â”€â”€ chatgpt_plus_usage_guide.md
+â”‚
+â”œâ”€â”€ 01_core_os/
+â”‚   â”œâ”€â”€ 00_master_agent_workflow.md
+â”‚   â”œâ”€â”€ 07_router_mode.md
+â”‚   â”œâ”€â”€ 08_agent_output_contract.md
+â”‚   â”œâ”€â”€ 09_review_record_template.md
+â”‚   â”œâ”€â”€ 10_agent_test_scenarios.md
+â”‚   â”œâ”€â”€ 11_conflict_resolution_rules.md
+â”‚   â””â”€â”€ 12_evidence_policy.md
+â”‚
+â”œâ”€â”€ 02_agents/
+â”‚   â”œâ”€â”€ 01_sql_optimizer_mode.md
+â”‚   â”œâ”€â”€ 02_sql_validator_mode.md
+â”‚   â”œâ”€â”€ 03_measure_optimizer_mode.md
+â”‚   â”œâ”€â”€ 04_documentation_mode.md
+â”‚   â”œâ”€â”€ 05_final_review_mode.md
+â”‚   â””â”€â”€ 06_phase_handover_protocol.md
+â”‚
+â”œâ”€â”€ 03_project_profiles/
+â”‚   â””â”€â”€ finance_ops_dev/
+â”‚       â”œâ”€â”€ 00_blocked_patterns.md
+â”‚       â”œâ”€â”€ 00_decision_log.md
+â”‚       â”œâ”€â”€ 00_naming_registry.md
+â”‚       â”œâ”€â”€ 00_project_memory.md
+â”‚       â”œâ”€â”€ 00_validation_memory.md
+â”‚       â”œâ”€â”€ 13_bi_implementation_drift_checklist.md
+â”‚       â”œâ”€â”€ dashboard_blueprint_profile.md
+â”‚       â””â”€â”€ semantic_model_profile.md
+â”‚
+â”œâ”€â”€ 04_templates/
+â”‚   â”œâ”€â”€ agent_handover_template.md
+â”‚   â”œâ”€â”€ phase_handover_template.md
+â”‚   â”œâ”€â”€ review_record_template.md
+â”‚   â””â”€â”€ project_profile_template/
+â”‚       â”œâ”€â”€ 00_blocked_patterns.md
+â”‚       â”œâ”€â”€ 00_decision_log.md
+â”‚       â”œâ”€â”€ 00_naming_registry.md
+â”‚       â”œâ”€â”€ 00_project_memory.md
+â”‚       â”œâ”€â”€ 00_validation_memory.md
+â”‚       â”œâ”€â”€ dashboard_blueprint_profile.md
+â”‚       â””â”€â”€ semantic_model_profile.md
+â”‚
+â”œâ”€â”€ 05_examples/
+â”‚   â””â”€â”€ finance_ops_dev_phase_12_review/
+â”‚       â”œâ”€â”€ .gitkeep
+â”‚       â”œâ”€â”€ README.md
+â”‚       â”œâ”€â”€ phase_12_review_record.md
+â”‚       â”œâ”€â”€ sql_optimizer_handover.md
+â”‚       â”œâ”€â”€ sql_validator_handover.md
+â”‚       â”œâ”€â”€ measure_optimizer_handover.md
+â”‚       â”œâ”€â”€ documentation_handover.md
+â”‚       â””â”€â”€ final_review_output.md
+â”‚
+â”œâ”€â”€ CURRENT_STATUS.md
+â”œâ”€â”€ PROGRESS_LOG.md
+â”œâ”€â”€ PROJECT_SCOPE.md
+â””â”€â”€ README.md
 ```
 
 ---
@@ -153,7 +153,7 @@ The profile contains:
 - naming registry
 - semantic model profile
 - dashboard blueprint profile
-- Power BI implementation drift checklist
+- BI platform implementation drift checklist
 
 ---
 
@@ -199,15 +199,15 @@ SQL file or SQL snippet to review
 
 ```text
 Router Agent
-↓
+â†“
 SQL Optimizer Agent
-↓
+â†“
 SQL Validator Agent
-↓
-DAX Optimizer Agent
-↓
+â†“
+Measure Optimizer Agent
+â†“
 Documentation Agent
-↓
+â†“
 Final Review Agent
 ```
 
@@ -215,17 +215,17 @@ Final Review Agent
 
 ```text
 SQL Optimizer Agent
-↓
+â†“
 SQL Validator Agent
-↓
+â†“
 Final Review Agent
 ```
 
-### DAX-Only Workflow
+### Measure-Only Workflow
 
 ```text
-DAX Optimizer Agent
-↓
+Measure Optimizer Agent
+â†“
 Final Review Agent
 ```
 
@@ -233,7 +233,7 @@ Final Review Agent
 
 ```text
 Documentation Agent
-↓
+â†“
 Final Review Agent
 ```
 
@@ -276,7 +276,7 @@ FAILED VALIDATION
 
 ```text
 Current Phase:
-Phase 5 — Review Record System and Example Workflow Completed
+Phase 5 â€” Review Record System and Example Workflow Completed
 
 Current Status:
 STRUCTURE READY / MANUAL WORKFLOW READY
@@ -296,7 +296,7 @@ Future possibilities include:
 
 - API-based agent runner
 - MCP-based tool access
-- GitHub read/write integration
+- repository read/write integration
 - PostgreSQL validation runner
 - shared memory layer
 - local CLI agent runner
@@ -319,3 +319,6 @@ validation-driven
 project-aware
 handover-ready
 ```
+
+
+

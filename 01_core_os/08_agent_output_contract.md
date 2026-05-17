@@ -1,4 +1,4 @@
-# Agent Output Contract — Arvizy
+﻿# Agent Output Contract â€” Arvizy
 
 ## 1. Purpose
 
@@ -25,7 +25,7 @@ This output contract applies to all Arvizy agent modes:
 - Router Agent
 - SQL Optimizer Agent
 - SQL Validator Agent
-- DAX Optimizer Agent
+- Measure Optimizer Agent
 - Documentation Agent
 - Final Review Agent
 - Phase Handover Protocol
@@ -182,10 +182,10 @@ Valid evidence may include:
 - direct database result
 - information schema result
 - semantic model export
-- `.bim` structure
+- `semantic model export` structure
 - Git diff/stat
 - user-provided validation result
-- Power BI relationship screenshot
+- BI platform relationship screenshot
 - KPI reconciliation output
 - current project documentation with clear date/context
 
@@ -193,7 +193,7 @@ Insufficient evidence includes:
 
 - memory only
 - old handover only
-- “likely correct”
+- â€œlikely correctâ€
 - undocumented assumption
 - generic best practice without project context
 
@@ -281,7 +281,7 @@ Router Agent must use this format.
 
 ### Request Classification
 
-[SQL / DAX / Documentation / Final Review / Handover / Mixed]
+[SQL / measure logic / Documentation / Final Review / Handover / Mixed]
 
 ### Recommended Workflow Intensity
 
@@ -376,12 +376,12 @@ NEEDS REVIEW
 
 ---
 
-## 14. DAX Optimizer Output Format
+## 14. Measure Optimizer Output Format
 
-DAX Optimizer Agent must include:
+Measure Optimizer Agent must include:
 
 ```text
-## DAX Optimizer Output
+## Measure Optimizer Output
 
 ### 1. Scope
 
@@ -393,7 +393,7 @@ DAX Optimizer Agent must include:
 
 ### 5. Relationship Dependency
 
-### 6. Recommended DAX
+### 6. Recommended Measure Logic
 
 ### 7. Visual Mapping
 
@@ -575,5 +575,8 @@ Applies to:
 All Arvizy agent modes
 
 Framework phase:
-Phase 2 — Core OS Knowledge Build
+Phase 2 â€” Core OS Knowledge Build
 ```
+
+
+

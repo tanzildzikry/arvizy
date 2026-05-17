@@ -1,4 +1,4 @@
-# Dashboard Blueprint Profile — [project_name]
+﻿# Dashboard Blueprint Profile â€” [project_name]
 
 ## 1. Purpose
 
@@ -37,13 +37,13 @@ The dashboard should guide the reader through:
 
 ```text
 What is happening?
-↓
+â†“
 Why does it matter?
-↓
+â†“
 Where is the issue?
-↓
+â†“
 Who/what needs action?
-↓
+â†“
 What should be done next?
 ```
 
@@ -179,3 +179,6 @@ DRAFT
 Project Profile:
 [project_name]
 ```
+
+
+

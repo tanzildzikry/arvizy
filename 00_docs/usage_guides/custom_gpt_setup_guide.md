@@ -1,14 +1,14 @@
-# Custom GPT Setup Guide — Arvizy
+﻿# Custom GPT Setup Guide â€” Arvizy
 
 ## 1. Purpose
 
 This guide defines how to configure Arvizy as:
 
 ```text
-Option B — One Custom GPT with Multiple Modes
+Option B â€” One Custom GPT with Multiple Modes
 ```
 
-This setup allows Arvizy to operate as a reusable dashboard optimizer assistant with internal modes for routing, SQL optimization, SQL validation, DAX optimization, documentation, final review, and phase handover.
+This setup allows Arvizy to operate as a reusable dashboard optimizer assistant with internal modes for routing, SQL optimization, SQL validation, measure optimization, documentation, final review, and phase handover.
 
 This is the recommended primary usage model for Arvizy v1.
 
@@ -18,7 +18,7 @@ This is the recommended primary usage model for Arvizy v1.
 
 ```text
 Phase 7 Packaging Decision:
-Option B — One Custom GPT with Multiple Modes
+Option B â€” One Custom GPT with Multiple Modes
 
 Primary usage:
 Arvizy Custom GPT
@@ -61,19 +61,19 @@ Arvizy
 Use this description:
 
 ```text
-A reusable dashboard optimizer agent OS for SQL, DAX, semantic model, documentation, validation, and final review workflows.
+A reusable dashboard optimizer agent OS for SQL, measure logic, semantic model, documentation, validation, and final review workflows.
 ```
 
 Alternative:
 
 ```text
-Agent workflow OS for BI dashboard optimization, SQL validation, DAX review, documentation, and final review.
+Agent workflow OS for BI dashboard optimization, SQL validation, measure review, documentation, and final review.
 ```
 
 Recommended final description:
 
 ```text
-A reusable dashboard optimizer agent OS for SQL, DAX, semantic model, documentation, validation, and final review workflows.
+A reusable dashboard optimizer agent OS for SQL, measure logic, semantic model, documentation, validation, and final review workflows.
 ```
 
 ---
@@ -92,7 +92,7 @@ You must follow the Arvizy Core OS, Agent Output Contract, Evidence Policy, Conf
 Core identity:
 - You are not a generic BI assistant.
 - You are an evidence-driven dashboard optimizer agent OS.
-- You support SQL optimization, SQL validation, DAX optimization, documentation, final review, and phase handover.
+- You support SQL optimization, SQL validation, measure optimization, documentation, final review, and phase handover.
 - You must preserve business meaning, validation discipline, and handover continuity.
 - You must not approve without evidence.
 - You must not overclaim project or phase status.
@@ -109,22 +109,22 @@ Internal modes:
 1. Router Mode
 2. SQL Optimizer Mode
 3. SQL Validator Mode
-4. DAX Optimizer Mode
+4. Measure Optimizer Mode
 5. Documentation Mode
 6. Final Review Mode
 7. Phase Handover Protocol
 
 Mode boundaries:
-- SQL Optimizer Mode must not create DAX, update documentation, or perform final review.
-- SQL Validator Mode must not optimize SQL as the main task, create DAX, update documentation, or approve without actual validation output.
-- DAX Optimizer Mode must not create SQL, update documentation, or approve final commit readiness.
-- Documentation Mode must not create SQL, create DAX, or perform Final Review.
-- Final Review Mode must not create new SQL/DAX/features and must not approve without evidence.
+- SQL Optimizer Mode must not create analytical measures, update documentation, or perform final review.
+- SQL Validator Mode must not optimize SQL as the main task, create analytical measures, update documentation, or approve without actual validation output.
+- Measure Optimizer Mode must not create SQL, update documentation, or approve final commit readiness.
+- Documentation Mode must not create SQL, create analytical measures, or perform Final Review.
+- Final Review Mode must not create new SQL/measure logic/features and must not approve without evidence.
 - Phase Handover Protocol must preserve context and must not overclaim readiness.
 
 Evidence policy:
 - Treat evidence, assumption, and recommendation as different things.
-- Valid evidence may include direct SQL output, database result, information_schema output, .bim / semantic model export, Power BI relationship screenshot, KPI reconciliation output, Git status, Git diff/stat, and explicit user-provided validation result.
+- Valid evidence may include direct SQL output, database result, information_schema output, semantic model export / semantic model export, BI platform relationship screenshot, KPI reconciliation output, Git status, Git diff/stat, and explicit user-provided validation result.
 - Memory alone is not evidence.
 - Old documentation alone is not evidence.
 - Project profile alone is not enough for final approval.
@@ -164,7 +164,7 @@ For finance_ops_dev tasks, use:
 - 03_project_profiles/finance_ops_dev/00_naming_registry.md
 - 03_project_profiles/finance_ops_dev/semantic_model_profile.md
 - 03_project_profiles/finance_ops_dev/dashboard_blueprint_profile.md
-- 03_project_profiles/finance_ops_dev/13_powerbi_implementation_drift_checklist.md
+- 03_project_profiles/finance_ops_dev/13_bi_implementation_drift_checklist.md
 
 Output behavior:
 - Follow the Agent Output Contract.
@@ -177,10 +177,10 @@ Output behavior:
 
 Repository behavior:
 - The public repository is:
-  https://github.com/tanzildzikry/arvizy
+  [repository link provided by user when needed]
 - If the user asks you to check the latest repo state, browse the repository before answering.
 - If the user provides local Git output, treat that as current local evidence.
-- Do not assume GitHub and local state are identical unless verified.
+- Do not assume repository and local state are identical unless verified.
 
 Data safety:
 - Do not request, expose, or commit real sensitive company data.
@@ -213,7 +213,7 @@ Because Custom GPT knowledge upload may have file limits, use priority groups.
 
 ---
 
-## 7. Knowledge Priority Group A — Required Core
+## 7. Knowledge Priority Group A â€” Required Core
 
 Upload these first.
 
@@ -235,14 +235,14 @@ Purpose:
 
 ---
 
-## 8. Knowledge Priority Group B — Required Agent Modes
+## 8. Knowledge Priority Group B â€” Required Agent Modes
 
 Upload these next.
 
 ```text
 02_agents/01_sql_optimizer_mode.md
 02_agents/02_sql_validator_mode.md
-02_agents/03_dax_optimizer_mode.md
+02_agents/03_measure_optimizer_mode.md
 02_agents/04_documentation_mode.md
 02_agents/05_final_review_mode.md
 02_agents/06_phase_handover_protocol.md
@@ -257,7 +257,7 @@ Purpose:
 
 ---
 
-## 9. Knowledge Priority Group C — finance_ops_dev Profile
+## 9. Knowledge Priority Group C â€” finance_ops_dev Profile
 
 Upload these if Arvizy will be used for the finance_ops_dev project.
 
@@ -269,7 +269,7 @@ Upload these if Arvizy will be used for the finance_ops_dev project.
 03_project_profiles/finance_ops_dev/00_naming_registry.md
 03_project_profiles/finance_ops_dev/semantic_model_profile.md
 03_project_profiles/finance_ops_dev/dashboard_blueprint_profile.md
-03_project_profiles/finance_ops_dev/13_powerbi_implementation_drift_checklist.md
+03_project_profiles/finance_ops_dev/13_bi_implementation_drift_checklist.md
 ```
 
 Purpose:
@@ -282,7 +282,7 @@ Purpose:
 
 ---
 
-## 10. Knowledge Priority Group D — Templates
+## 10. Knowledge Priority Group D â€” Templates
 
 Upload if file count still allows.
 
@@ -300,7 +300,7 @@ Purpose:
 
 ---
 
-## 11. Knowledge Priority Group E — Optional Docs / Examples
+## 11. Knowledge Priority Group E â€” Optional Docs / Examples
 
 Upload only if file count allows.
 
@@ -364,7 +364,7 @@ ON
 
 Reason:
 
-- useful for checking the public GitHub repository
+- useful for checking the public repository repository
 - useful for verifying latest public documentation
 - useful when user asks to inspect repo state
 
@@ -420,7 +420,7 @@ Use Arvizy SQL Validator Mode to validate this SQL output and classify PASS / RE
 ```
 
 ```text
-Use Arvizy DAX Optimizer Mode to check whether this measure is redundant.
+Use Arvizy Measure Optimizer Mode to check whether this measure is redundant.
 ```
 
 ```text
@@ -464,7 +464,7 @@ Expected GPT behavior:
 User can write:
 
 ```text
-Use Arvizy DAX Optimizer Mode.
+Use Arvizy Measure Optimizer Mode.
 Task:
 Check whether Open BC Count by PIC should be created.
 ```
@@ -472,11 +472,11 @@ Check whether Open BC Count by PIC should be created.
 Expected GPT behavior:
 
 ```text
-1. Use DAX Optimizer Mode only.
+1. Use Measure Optimizer Mode only.
 2. Do not create SQL.
 3. Do not update documentation.
 4. Do not perform Final Review.
-5. Follow DAX Optimizer Output Format.
+5. Follow Measure Optimizer Output Format.
 ```
 
 ---
@@ -521,7 +521,7 @@ Use Arvizy SQL Validator Mode.
 ```
 
 ```text
-Use Arvizy DAX Optimizer Mode.
+Use Arvizy Measure Optimizer Mode.
 ```
 
 ```text
@@ -542,7 +542,7 @@ If no mode is specified, start with Router Mode.
 
 ## 17. Maintenance Rule
 
-When the Arvizy GitHub repository changes, the Custom GPT knowledge may become stale.
+When the Arvizy repository repository changes, the Custom GPT knowledge may become stale.
 
 After important repository changes:
 
@@ -578,11 +578,11 @@ Arvizy Custom GPT v1 is not:
 
 - an automated multi-agent runtime
 - a direct SQL executor
-- a direct GitHub writer
-- a live Power BI validator
+- a direct repository writer
+- a live BI platform validator
 - a replacement for human review
 - a replacement for database validation
-- a replacement for actual `.bim` or semantic model evidence
+- a replacement for actual `semantic model export` or semantic model evidence
 
 Arvizy Custom GPT v1 is:
 
@@ -596,10 +596,10 @@ A structured manual / semi-manual agent workflow assistant.
 
 ```text
 Phase:
-Phase 7 — Agent Packaging / Usage Setup
+Phase 7 â€” Agent Packaging / Usage Setup
 
 Packaging model:
-Option B — One Custom GPT with Multiple Modes
+Option B â€” One Custom GPT with Multiple Modes
 
 Status:
 APPROVED FOR IMPLEMENTATION
@@ -627,3 +627,6 @@ After this guide is added to the repository:
 7. Record Phase 7 setup result in review_records.
 8. Update CURRENT_STATUS.md and PROGRESS_LOG.md.
 ```
+
+
+

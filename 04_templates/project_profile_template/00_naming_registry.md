@@ -1,4 +1,4 @@
-# Naming Registry — [project_name]
+﻿# Naming Registry â€” [project_name]
 
 ## 1. Purpose
 
@@ -24,7 +24,7 @@ Direct evidence may include:
 - latest view/table definition
 - latest schema output
 - latest semantic model export
-- latest `.bim`
+- latest `semantic model export`
 - latest user-provided column list
 - latest validated project documentation
 
@@ -127,3 +127,6 @@ Project Profile:
 Freshness:
 NEEDS DIRECT VALIDATION BEFORE FINAL TECHNICAL OUTPUT
 ```
+
+
+

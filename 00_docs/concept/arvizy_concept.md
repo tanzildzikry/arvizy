@@ -1,4 +1,4 @@
-# Arvizy Concept
+﻿# Arvizy Concept
 
 ## 1. Definition
 
@@ -40,7 +40,7 @@ Arvizy helps BI and analytics projects maintain:
 
 - clear SQL layer responsibility
 - stable semantic model design
-- controlled DAX measure development
+- controlled analytical measure development
 - validation-first workflow
 - documentation consistency
 - phase handover continuity
@@ -56,9 +56,9 @@ Arvizy can support review and optimization for:
 - SQL readability
 - SQL validation logic
 - semantic model structure
-- DAX measure design
-- DAX redundancy control
-- Power BI relationship design
+- analytical measure design
+- measure redundancy control
+- BI platform relationship design
 - dashboard blueprint clarity
 - documentation consistency
 - phase handover quality
@@ -101,7 +101,7 @@ Arvizy uses the following planned agent modes:
 - Router Agent
 - SQL Optimizer Agent
 - SQL Validator Agent
-- DAX Optimizer Agent
+- Measure Optimizer Agent
 - Documentation Agent
 - Final Review Agent
 - Phase Handover Protocol
@@ -151,7 +151,7 @@ Future possibilities include:
 
 - API-based agent runner
 - MCP-based tool integration
-- GitHub read/write integration
+- repository read/write integration
 - PostgreSQL validation runner
 - shared memory layer
 - reusable dashboard profile templates
@@ -169,8 +169,11 @@ Status:
 EARLY FRAMEWORK BUILD
 
 Current Phase:
-Phase 2 — Core OS Knowledge Build
+Phase 2 â€” Core OS Knowledge Build
 
 Runtime:
 Manual / semi-manual workflow with ChatGPT Plus or similar agent environments
 ```
+
+
+

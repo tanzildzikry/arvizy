@@ -1,4 +1,4 @@
-# Decision Log — [project_name]
+﻿# Decision Log â€” [project_name]
 
 ## 1. Purpose
 
@@ -28,7 +28,7 @@ BLOCKED
 
 ## 3. Locked Decisions
 
-### Decision 001 — [Decision Title]
+### Decision 001 â€” [Decision Title]
 
 Status:
 
@@ -60,7 +60,7 @@ Reversal condition:
 
 ---
 
-### Decision 002 — [Decision Title]
+### Decision 002 â€” [Decision Title]
 
 Status:
 
@@ -116,3 +116,6 @@ DRAFT
 Project Profile:
 [project_name]
 ```
+
+
+

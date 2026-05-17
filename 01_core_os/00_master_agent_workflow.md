@@ -1,4 +1,4 @@
-# Arvizy Master Agent Workflow
+﻿# Arvizy Master Agent Workflow
 
 ## 1. Purpose
 
@@ -26,7 +26,7 @@ Arvizy helps BI and analytics projects maintain:
 
 - clear SQL layer responsibility
 - stable semantic model design
-- controlled DAX measure development
+- controlled analytical measure development
 - validation-first workflow
 - documentation consistency
 - phase handover continuity
@@ -47,7 +47,7 @@ Arvizy uses the following agent modes:
 | Router Agent | Classify the user request and select the correct agent sequence |
 | SQL Optimizer Agent | Review and improve SQL structure, readability, performance, and BI readiness |
 | SQL Validator Agent | Validate SQL correctness, grain, reconciliation, and evidence |
-| DAX Optimizer Agent | Review and optimize DAX measures, dependency, naming, and filter context |
+| Measure Optimizer Agent | Review and optimize analytical measures, dependency, naming, and filter context |
 | Documentation Agent | Update documentation, review records, progress logs, and handover files |
 | Final Review Agent | Approve, block, or request revision based on evidence and risk |
 | Phase Handover Protocol | Preserve continuity across phases, agents, chats, and working sessions |
@@ -60,15 +60,15 @@ Default full workflow:
 
 ```text
 Router Agent
-↓
+â†“
 SQL Optimizer Agent
-↓
+â†“
 SQL Validator Agent
-↓
-DAX Optimizer Agent
-↓
+â†“
+Measure Optimizer Agent
+â†“
 Documentation Agent
-↓
+â†“
 Final Review Agent
 ```
 
@@ -92,7 +92,7 @@ Examples:
 
 - suggest a commit message
 - review one small documentation section
-- explain one SQL or DAX snippet
+- explain one SQL or measure logic snippet
 - classify whether a task needs optimizer or validator mode
 
 ### Standard Workflow
@@ -103,7 +103,7 @@ Examples:
 
 - review one SQL view
 - validate one SQL result
-- refactor a small set of DAX measures
+- refactor a small set of analytical measures
 - update documentation based on a completed validation
 
 ### Full Workflow
@@ -112,7 +112,7 @@ Use when a task affects multiple layers or phase readiness.
 
 Examples:
 
-- SQL + DAX + documentation review
+- SQL + measure logic + documentation review
 - semantic model readiness review
 - phase transition
 - pre-commit review after multiple changes
@@ -132,7 +132,7 @@ SQL Layer
 Semantic Model Layer
 = relationships, table grain, dimension/fact structure, filter path, model usability
 
-DAX Layer
+Measure Logic Layer
 = analytical calculations, KPI measures, display measures, dynamic titles, controlled narrative measures
 
 Visual Layer
@@ -216,11 +216,11 @@ Any approval must be backed by evidence such as:
 - database result
 - information schema result
 - semantic model export
-- `.bim` structure
+- `semantic model export` structure
 - Git diff/stat
 - documented user-provided result
 - validated review record
-- Power BI relationship screenshot
+- BI platform relationship screenshot
 - KPI reconciliation output
 
 Memory alone is not enough to approve.
@@ -381,7 +381,7 @@ For the first case study:
 Current framework phase:
 
 ```text
-Phase 2 — Core OS Knowledge Build
+Phase 2 â€” Core OS Knowledge Build
 ```
 
 Current maturity:
@@ -393,3 +393,6 @@ EARLY STRUCTURE / NOT YET PRODUCTION AUTOMATED
 Arvizy currently supports manual and semi-manual agent workflow usage.
 
 Automated MCP/API runtime is out of scope for the initial version unless explicitly added in a later phase.
+
+
+

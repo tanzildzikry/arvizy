@@ -1,10 +1,10 @@
-# Dashboard Blueprint Profile — finance_ops_dev
+﻿# Dashboard Blueprint Profile â€” finance_ops_dev
 
 ## 1. Purpose
 
 This file defines the dashboard blueprint expectations for the `finance_ops_dev` project profile.
 
-It helps Arvizy agents review whether SQL, DAX, semantic model, and visuals support the intended dashboard structure.
+It helps Arvizy agents review whether SQL, measure logic, semantic model, and visuals support the intended dashboard structure.
 
 This profile is conceptual and must be aligned with the latest dashboard blueprint documentation before final implementation approval.
 
@@ -48,13 +48,13 @@ The dashboard should guide the reader through:
 
 ```text
 What is happening?
-↓
+â†“
 Why does it matter?
-↓
+â†“
 Where is the issue?
-↓
+â†“
 Who/what needs action?
-↓
+â†“
 What should be done next?
 ```
 
@@ -247,7 +247,7 @@ Suggested slicers:
 
 Important rule:
 
-DAX should not create duplicate by-PIC measures if Dim_PIC slicing can handle analysis.
+measure logic should not create duplicate by-PIC measures if Dim_PIC slicing can handle analysis.
 
 ---
 
@@ -409,7 +409,7 @@ Dashboard design is ready for implementation when:
 
 - semantic model objects are defined
 - relationships are clear
-- DAX measure baseline is controlled
+- analytical measure baseline is controlled
 - SQL reporting layer is validated enough
 - KPI reconciliation path exists
 - visual mapping is clear
@@ -438,5 +438,8 @@ Freshness:
 NEEDS ALIGNMENT WITH LATEST DASHBOARD BLUEPRINT AND PHASE 12 DOCUMENTATION
 
 Framework phase:
-Phase 4 — Finance Ops Dev Project Profile Build
+Phase 4 â€” Finance Ops Dev Project Profile Build
 ```
+
+
+

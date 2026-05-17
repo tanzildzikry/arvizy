@@ -1,12 +1,12 @@
-# Semantic Model Profile — finance_ops_dev
+﻿# Semantic Model Profile â€” finance_ops_dev
 
 ## 1. Purpose
 
 This file defines the semantic model expectations for the `finance_ops_dev` project profile.
 
-It helps Arvizy agents review Power BI model design, DAX logic, relationship readiness, and implementation drift.
+It helps Arvizy agents review BI platform model design, measure logic, relationship readiness, and implementation drift.
 
-This profile must be validated against the latest `.bim`, Power BI model export, or current semantic model documentation before final technical approval.
+This profile must be validated against the latest `semantic model export`, BI platform model export, or current semantic model documentation before final technical approval.
 
 ---
 
@@ -21,9 +21,9 @@ The semantic model should be:
 - easy to explain
 - suitable for executive and operational dashboard pages
 - aligned with SQL reporting layer
-- controlled through canonical DAX measures
+- controlled through canonical analytical measures
 
-Power BI should consume curated reporting objects rather than raw operational tables.
+BI platform should consume curated reporting objects rather than raw operational tables.
 
 ---
 
@@ -52,7 +52,7 @@ Potential / expected reporting objects:
 
 Important:
 
-Exact names must be validated against latest Phase 12 documentation or `.bim`.
+Exact names must be validated against latest Phase 12 documentation or `semantic model export`.
 
 ---
 
@@ -100,7 +100,7 @@ _Measures
 
 Purpose:
 
-- store DAX measures
+- store analytical measures
 - keep measures organized
 - avoid scattering measures across random tables
 
@@ -212,9 +212,9 @@ NEEDS REVIEW
 
 ---
 
-## 11. DAX Design Principles
+## 11. Measure Design Principles
 
-DAX measures should:
+analytical measures should:
 
 - use canonical base measures
 - avoid duplicate by-PIC/by-customer/by-division measures
@@ -227,7 +227,7 @@ DAX measures should:
 
 ---
 
-## 12. Expected DAX Measure Groups
+## 12. Expected Analytical Measure Groups
 
 Potential measure groups:
 
@@ -240,7 +240,7 @@ Display
 Narrative
 ```
 
-Exact folder/order must be validated against latest `.bim` or measure documentation.
+Exact folder/order must be validated against latest `semantic model export` or measure documentation.
 
 ---
 
@@ -277,7 +277,7 @@ Arvizy agents should check:
 - disconnected control tables
 - fact-to-fact avoidance
 - bidirectional filter avoidance
-- DAX measure dependencies
+- analytical measure dependencies
 - KPI reconciliation
 - dashboard visual field mapping
 
@@ -287,11 +287,11 @@ Arvizy agents should check:
 
 Semantic model approval requires one or more of:
 
-- latest `.bim`
+- latest `semantic model export`
 - model relationship screenshot
 - exported semantic model metadata
 - table/relationship list
-- DAX measure list
+- analytical measure list
 - KPI reconciliation output
 - user-provided validation result
 
@@ -316,5 +316,8 @@ Freshness:
 NEEDS VALIDATION AGAINST LATEST .BIM / MODEL EXPORT / PHASE 12 DOCS
 
 Framework phase:
-Phase 4 — Finance Ops Dev Project Profile Build
+Phase 4 â€” Finance Ops Dev Project Profile Build
 ```
+
+
+

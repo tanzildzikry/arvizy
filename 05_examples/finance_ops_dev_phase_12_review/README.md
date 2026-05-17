@@ -1,4 +1,4 @@
-# Example Review — finance_ops_dev Phase 12
+﻿# Example Review â€” finance_ops_dev Phase 12
 
 ## 1. Purpose
 
@@ -7,7 +7,7 @@ This folder stores an example Arvizy review workflow for the `finance_ops_dev` p
 The example is focused on:
 
 ```text
-Phase 12 — Power BI Semantic Model Build / Relationship Setup
+Phase 12 â€” BI Semantic Model Build / Relationship Setup
 ```
 
 This example demonstrates how Arvizy should review a real BI dashboard project using:
@@ -27,7 +27,7 @@ This example demonstrates how Arvizy should review a real BI dashboard project u
 
 This example covers a simulated review of Phase 12 readiness.
 
-The review checks whether the project is ready to proceed with Power BI semantic model implementation.
+The review checks whether the project is ready to proceed with BI semantic model implementation.
 
 The example does not claim that Phase 12 is fully complete.
 
@@ -53,15 +53,15 @@ Recommended full workflow:
 
 ```text
 Router Agent
-↓
+â†“
 SQL Optimizer Agent
-↓
+â†“
 SQL Validator Agent
-↓
-DAX Optimizer Agent
-↓
+â†“
+Measure Optimizer Agent
+â†“
 Documentation Agent
-↓
+â†“
 Final Review Agent
 ```
 
@@ -71,13 +71,13 @@ Final Review Agent
 
 ```text
 05_examples/finance_ops_dev_phase_12_review/
-├── README.md
-├── phase_12_review_record.md
-├── sql_optimizer_handover.md
-├── sql_validator_handover.md
-├── dax_optimizer_handover.md
-├── documentation_handover.md
-└── final_review_output.md
+â”œâ”€â”€ README.md
+â”œâ”€â”€ phase_12_review_record.md
+â”œâ”€â”€ sql_optimizer_handover.md
+â”œâ”€â”€ sql_validator_handover.md
+â”œâ”€â”€ measure_optimizer_handover.md
+â”œâ”€â”€ documentation_handover.md
+â””â”€â”€ final_review_output.md
 ```
 
 ---
@@ -110,3 +110,6 @@ Phase 12 semantic model readiness review
 Validation:
 Illustrative only. Must not be treated as direct project evidence.
 ```
+
+
+

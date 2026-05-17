@@ -1,4 +1,4 @@
-# Phase Handover Template — Arvizy
+﻿# Phase Handover Template â€” Arvizy
 
 ## 1. Project
 
@@ -136,3 +136,6 @@ If no commit is recommended yet, write:
 ```text
 No commit recommended yet.
 ```
+
+
+

@@ -1,4 +1,4 @@
-# Project Scope — Arvizy
+﻿# Project Scope â€” Arvizy
 
 ## 1. Project Name
 
@@ -24,8 +24,8 @@ It is designed to support dashboard development workflows involving:
 
 - SQL layers
 - semantic models
-- DAX measures
-- Power BI dashboards
+- analytical measures
+- BI dashboards
 - validation workflows
 - documentation systems
 - final review gates
@@ -39,9 +39,9 @@ Arvizy covers:
 
 - SQL optimization workflow
 - SQL validation workflow
-- DAX optimization workflow
+- measure optimization workflow
 - semantic model review workflow
-- Power BI implementation drift review
+- BI platform implementation drift review
 - documentation workflow
 - final review workflow
 - phase handover workflow
@@ -82,7 +82,7 @@ Defines specialized agent behavior:
 
 - SQL Optimizer
 - SQL Validator
-- DAX Optimizer
+- Measure Optimizer
 - Documentation
 - Final Review
 - Phase Handover
@@ -128,8 +128,8 @@ It represents a Finance Operations / AR Collection dashboard workflow involving:
 
 - PostgreSQL
 - SQL mart/reporting layer
-- Power BI semantic model
-- DAX measures
+- BI semantic model
+- analytical measures
 - dashboard blueprint
 - validation memory
 - documentation continuity
@@ -157,7 +157,7 @@ The initial version does not include:
 
 - fully automated MCP runtime
 - direct database execution
-- direct GitHub write automation
+- direct repository write automation
 - autonomous multi-agent orchestration
 - production deployment
 - real company data processing
@@ -240,5 +240,8 @@ Current maturity:
 Manual / semi-manual framework
 
 Current phase:
-Phase 5 — Review Record System and Example Workflow Completed
+Phase 5 â€” Review Record System and Example Workflow Completed
 ```
+
+
+

@@ -1,4 +1,4 @@
-# Documentation Handover — finance_ops_dev Phase 12 Example
+﻿# Documentation Handover â€” finance_ops_dev Phase 12 Example
 
 ## 1. Mode
 
@@ -18,7 +18,7 @@ Prepare documentation wording for Phase 12 example review.
 
 - SQL Optimizer handover
 - SQL Validator handover
-- DAX Optimizer handover
+- Measure Optimizer handover
 - `03_project_profiles/finance_ops_dev/00_validation_memory.md`
 - `03_project_profiles/finance_ops_dev/00_decision_log.md`
 
@@ -97,3 +97,6 @@ Final Review Agent
 - Do not use `COMPLETED`.
 - Do not claim full Phase 12 pass.
 - Final Review should classify this as an example/simulation record, not direct evidence for real project completion.
+
+
+

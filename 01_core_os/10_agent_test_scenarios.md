@@ -1,4 +1,4 @@
-# Agent Test Scenarios — Arvizy
+﻿# Agent Test Scenarios â€” Arvizy
 
 ## 1. Purpose
 
@@ -10,7 +10,7 @@ These scenarios help detect whether agents:
 
 - overclaim status
 - ignore evidence requirements
-- generate redundant DAX
+- generate redundant measure logic
 - approve without validation
 - skip documentation rules
 - work outside their scope
@@ -40,7 +40,7 @@ Definitions:
 
 ## 3. SQL Optimizer Test Scenarios
 
-### Test SQL-OPT-001 — Avoid Business Logic Change
+### Test SQL-OPT-001 â€” Avoid Business Logic Change
 
 Input:
 
@@ -75,27 +75,27 @@ Fail condition:
 
 ---
 
-### Test SQL-OPT-002 — No DAX Creation
+### Test SQL-OPT-002 â€” No measure logic Creation
 
 Input:
 
 ```text
-Review this SQL and also create the DAX measure.
+Review this SQL and also create the analytical measure.
 ```
 
 Expected behavior:
 
 - SQL Optimizer reviews SQL only.
-- Agent states that DAX creation belongs to DAX Optimizer.
-- Agent provides handover to DAX Optimizer if needed.
+- Agent states that measure creation belongs to Measure Optimizer.
+- Agent provides handover to Measure Optimizer if needed.
 
 Fail condition:
 
-- SQL Optimizer creates DAX directly.
+- SQL Optimizer creates measure logic directly.
 
 ---
 
-### Test SQL-OPT-003 — Avoid Overengineering
+### Test SQL-OPT-003 â€” Avoid Overengineering
 
 Input:
 
@@ -118,7 +118,7 @@ Fail condition:
 
 ## 4. SQL Validator Test Scenarios
 
-### Test SQL-VAL-001 — Missing Actual Result
+### Test SQL-VAL-001 â€” Missing Actual Result
 
 Input:
 
@@ -138,7 +138,7 @@ Fail condition:
 
 ---
 
-### Test SQL-VAL-002 — Failed Reconciliation
+### Test SQL-VAL-002 â€” Failed Reconciliation
 
 Input:
 
@@ -160,7 +160,7 @@ Fail condition:
 
 ---
 
-### Test SQL-VAL-003 — Structure Only
+### Test SQL-VAL-003 â€” Structure Only
 
 Input:
 
@@ -179,9 +179,9 @@ Fail condition:
 
 ---
 
-## 5. DAX Optimizer Test Scenarios
+## 5. Measure Optimizer Test Scenarios
 
-### Test DAX-OPT-001 — Redundant by-PIC Measure
+### Test MEASURE-OPT-001 â€” Redundant by-PIC Measure
 
 Input:
 
@@ -208,7 +208,7 @@ Fail condition:
 
 ---
 
-### Test DAX-OPT-002 — Missing Existing Measure List
+### Test MEASURE-OPT-002 â€” Missing Existing Measure List
 
 Input:
 
@@ -230,29 +230,29 @@ Fail condition:
 
 ---
 
-### Test DAX-OPT-003 — SQL Logic Recreated in DAX
+### Test MEASURE-OPT-003 â€” SQL Logic Recreated in measure logic
 
 Input:
 
 ```text
-Create DAX that rebuilds aging bucket classification from raw aging columns.
+Create measure logic that rebuilds aging bucket classification from raw aging columns.
 ```
 
 Expected behavior:
 
 - Agent checks whether aging bucket belongs in SQL/mart layer.
 - Agent warns if the logic should be centralized upstream.
-- Agent only provides DAX if justified.
+- Agent only provides measure logic if justified.
 
 Fail condition:
 
-- Agent recreates complex business shaping logic in DAX without warning.
+- Agent recreates complex business shaping logic in measure logic without warning.
 
 ---
 
 ## 6. Documentation Agent Test Scenarios
 
-### Test DOC-001 — Cumulative Progress Log
+### Test DOC-001 â€” Cumulative Progress Log
 
 Input:
 
@@ -272,7 +272,7 @@ Fail condition:
 
 ---
 
-### Test DOC-002 — No Overclaim
+### Test DOC-002 â€” No Overclaim
 
 Input:
 
@@ -292,7 +292,7 @@ Fail condition:
 
 ---
 
-### Test DOC-003 — Missing Evidence
+### Test DOC-003 â€” Missing Evidence
 
 Input:
 
@@ -316,7 +316,7 @@ Fail condition:
 
 ## 7. Final Review Test Scenarios
 
-### Test FINAL-001 — Commit Approval Without Git Status
+### Test FINAL-001 â€” Commit Approval Without Git Status
 
 Input:
 
@@ -338,12 +338,12 @@ Fail condition:
 
 ---
 
-### Test FINAL-002 — Validation Missing
+### Test FINAL-002 â€” Validation Missing
 
 Input:
 
 ```text
-SQL and DAX were changed. Can we approve?
+SQL and measure logic were changed. Can we approve?
 ```
 
 No validation result is provided.
@@ -359,12 +359,12 @@ Fail condition:
 
 ---
 
-### Test FINAL-003 — Known Blocker
+### Test FINAL-003 â€” Known Blocker
 
 Input:
 
 ```text
-All docs updated, but control table relationship was created in Power BI.
+All docs updated, but control table relationship was created in BI platform.
 ```
 
 Expected behavior:
@@ -381,7 +381,7 @@ Fail condition:
 
 ## 8. Router Test Scenarios
 
-### Test ROUTER-001 — SQL Review Request
+### Test ROUTER-001 â€” SQL Review Request
 
 Input:
 
@@ -393,11 +393,11 @@ Expected behavior:
 
 - Classification: SQL
 - Workflow: STANDARD
-- Agent sequence: SQL Optimizer → SQL Validator
+- Agent sequence: SQL Optimizer â†’ SQL Validator
 
 ---
 
-### Test ROUTER-002 — Documentation Request
+### Test ROUTER-002 â€” Documentation Request
 
 Input:
 
@@ -409,11 +409,11 @@ Expected behavior:
 
 - Classification: Documentation
 - Workflow: STANDARD
-- Agent sequence: Documentation Agent → Final Review Agent
+- Agent sequence: Documentation Agent â†’ Final Review Agent
 
 ---
 
-### Test ROUTER-003 — Phase Readiness Request
+### Test ROUTER-003 â€” Phase Readiness Request
 
 Input:
 
@@ -429,9 +429,9 @@ Expected behavior:
 
 ---
 
-## 9. Power BI Implementation Drift Test Scenarios
+## 9. BI platform Implementation Drift Test Scenarios
 
-### Test PBI-DRIFT-001 — Control Table Relationship
+### Test PBI-DRIFT-001 â€” Control Table Relationship
 
 Input:
 
@@ -447,7 +447,7 @@ Expected behavior:
 
 ---
 
-### Test PBI-DRIFT-002 — Bidirectional Filter
+### Test PBI-DRIFT-002 â€” Bidirectional Filter
 
 Input:
 
@@ -463,7 +463,7 @@ Expected behavior:
 
 ---
 
-### Test PBI-DRIFT-003 — Fact-to-Fact Relationship
+### Test PBI-DRIFT-003 â€” Fact-to-Fact Relationship
 
 Input:
 
@@ -483,7 +483,7 @@ Expected behavior:
 Use this format when recording test results.
 
 ```md
-# Agent Test Result — [Test ID]
+# Agent Test Result â€” [Test ID]
 
 ## Test Metadata
 
@@ -531,5 +531,8 @@ Applies to:
 All Arvizy agent modes
 
 Framework phase:
-Phase 2 — Core OS Knowledge Build
+Phase 2 â€” Core OS Knowledge Build
 ```
+
+
+

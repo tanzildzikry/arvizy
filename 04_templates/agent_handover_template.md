@@ -1,4 +1,4 @@
-# Agent Handover Template — Arvizy
+﻿# Agent Handover Template â€” Arvizy
 
 ## 1. Mode
 
@@ -118,3 +118,6 @@ No files affected.
 - [what the next agent must not assume]
 - [what remains unresolved]
 - [what should be checked next]
+
+
+

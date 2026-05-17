@@ -1,4 +1,4 @@
-# Review Record Template — Arvizy
+﻿# Review Record Template â€” Arvizy
 
 ## 1. Review Metadata
 
@@ -39,7 +39,7 @@ No source files reviewed.
 1. [Router Agent / Not used]
 2. [SQL Optimizer Agent / Not used]
 3. [SQL Validator Agent / Not used]
-4. [DAX Optimizer Agent / Not used]
+4. [Measure Optimizer Agent / Not used]
 5. [Documentation Agent / Not used]
 6. [Final Review Agent / Not used]
 
@@ -62,7 +62,7 @@ No source files reviewed.
 - [finding]
 - [finding]
 
-### 5.4 DAX Optimizer Agent
+### 5.4 Measure Optimizer Agent
 
 - [finding]
 - [finding]
@@ -175,3 +175,6 @@ No commit recommended yet.
 
 - [handover note]
 - [handover note]
+
+
+

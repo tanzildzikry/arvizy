@@ -1,4 +1,4 @@
-# Review Record Template — Arvizy
+﻿# Review Record Template â€” Arvizy
 
 ## 1. Purpose
 
@@ -31,7 +31,7 @@ Examples:
 ```text
 2026_05_17_finance_ops_dev_phase_12_blueprint_review.md
 2026_05_17_finance_ops_dev_sql_optimizer_review.md
-2026_05_17_finance_ops_dev_dax_optimizer_review.md
+2026_05_17_finance_ops_dev_measure_optimizer_review.md
 2026_05_17_finance_ops_dev_final_review.md
 ```
 
@@ -40,7 +40,7 @@ Examples:
 ## 3. Review Record Template
 
 ```md
-# Review Record — [Project / Topic]
+# Review Record â€” [Project / Topic]
 
 ## 1. Review Metadata
 
@@ -98,7 +98,7 @@ No source files reviewed.
 - [finding]
 - [finding]
 
-### 5.4 DAX Optimizer Agent
+### 5.4 Measure Optimizer Agent
 
 - [finding]
 - [finding]
@@ -254,7 +254,7 @@ APPROVED FOR IMPLEMENTATION
 For small reviews, this compact format is acceptable.
 
 ```md
-# Review Record — [Topic]
+# Review Record â€” [Topic]
 
 ## Metadata
 
@@ -319,5 +319,8 @@ Applies to:
 All Arvizy review records
 
 Framework phase:
-Phase 2 — Core OS Knowledge Build
+Phase 2 â€” Core OS Knowledge Build
 ```
+
+
+

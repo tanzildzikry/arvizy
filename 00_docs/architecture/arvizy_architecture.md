@@ -1,4 +1,4 @@
-# Arvizy Architecture
+﻿# Arvizy Architecture
 
 ## 1. Architecture Overview
 
@@ -21,22 +21,22 @@ Each layer has a different responsibility.
 
 ```text
 arvizy/
-│
-├── 00_docs/
-│   ├── concept/
-│   ├── architecture/
-│   ├── usage_guides/
-│   └── review_records/
-│
-├── 01_core_os/
-│
-├── 02_agents/
-│
-├── 03_project_profiles/
-│
-├── 04_templates/
-│
-└── 05_examples/
+â”‚
+â”œâ”€â”€ 00_docs/
+â”‚   â”œâ”€â”€ concept/
+â”‚   â”œâ”€â”€ architecture/
+â”‚   â”œâ”€â”€ usage_guides/
+â”‚   â””â”€â”€ review_records/
+â”‚
+â”œâ”€â”€ 01_core_os/
+â”‚
+â”œâ”€â”€ 02_agents/
+â”‚
+â”œâ”€â”€ 03_project_profiles/
+â”‚
+â”œâ”€â”€ 04_templates/
+â”‚
+â””â”€â”€ 05_examples/
 ```
 
 ---
@@ -87,7 +87,7 @@ Planned agent modes:
 
 - SQL Optimizer Agent
 - SQL Validator Agent
-- DAX Optimizer Agent
+- Measure Optimizer Agent
 - Documentation Agent
 - Final Review Agent
 - Phase Handover Protocol
@@ -171,19 +171,19 @@ Review records help preserve continuity across phases and chats.
 
 ```text
 User Request
-↓
+â†“
 Router Agent
-↓
+â†“
 Selected Agent Sequence
-↓
+â†“
 Agent Output Contract
-↓
+â†“
 Validation / Evidence Gate
-↓
+â†“
 Documentation / Review Record
-↓
+â†“
 Final Review
-↓
+â†“
 Implementation / Commit Decision
 ```
 
@@ -195,15 +195,15 @@ Default full workflow:
 
 ```text
 Router Agent
-↓
+â†“
 SQL Optimizer Agent
-↓
+â†“
 SQL Validator Agent
-↓
-DAX Optimizer Agent
-↓
+â†“
+Measure Optimizer Agent
+â†“
 Documentation Agent
-↓
+â†“
 Final Review Agent
 ```
 
@@ -223,7 +223,7 @@ Examples:
 
 - commit message suggestion
 - small documentation review
-- explain one SQL or DAX snippet
+- explain one SQL or measure logic snippet
 - classify task type
 
 ### Standard Workflow
@@ -234,7 +234,7 @@ Examples:
 
 - SQL view review
 - SQL validation
-- DAX measure review
+- analytical measure review
 - documentation update after validation
 
 ### Full Workflow
@@ -243,7 +243,7 @@ Used when multiple layers or phase readiness are affected.
 
 Examples:
 
-- SQL + DAX + documentation review
+- SQL + measure logic + documentation review
 - semantic model readiness review
 - dashboard blueprint review
 - phase transition
@@ -260,7 +260,7 @@ SQL Layer
 Semantic Model Layer
 = relationships, grain, dimension/fact structure, filter path
 
-DAX Layer
+Measure Logic Layer
 = analytical measures, display measures, controlled dynamic logic
 
 Visual Layer
@@ -284,9 +284,9 @@ Evidence may include:
 - database query result
 - `information_schema` output
 - semantic model export
-- `.bim` file structure
+- `semantic model export` file structure
 - Git diff/stat
-- Power BI screenshot
+- BI platform screenshot
 - KPI reconciliation result
 - explicit user-provided validation result
 
@@ -361,6 +361,9 @@ Future Runtime Options:
 OpenAI API
 MCP tools
 local agent runner
-GitHub integration
+repository integration
 database validation runner
 ```
+
+
+

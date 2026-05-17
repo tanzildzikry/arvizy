@@ -1,4 +1,4 @@
-# Documentation Mode — Arvizy
+﻿# Documentation Mode â€” Arvizy
 
 ## 1. Purpose
 
@@ -77,7 +77,7 @@ The Documentation Agent may:
 The Documentation Agent must not:
 
 - create SQL logic
-- create DAX measures
+- create analytical measures
 - approve technical validation
 - mark phase as complete without evidence
 - replace cumulative progress with latest-only update
@@ -154,7 +154,7 @@ Documentation updates must be based on evidence such as:
 - git status
 - git diff/stat
 - SQL output
-- DAX review output
+- measure review output
 - semantic model review
 - final review decision
 - explicit user-provided result
@@ -400,5 +400,8 @@ Agent Mode:
 Documentation Agent
 
 Framework phase:
-Phase 3 — Agent Role Knowledge Build
+Phase 3 â€” Agent Role Knowledge Build
 ```
+
+
+

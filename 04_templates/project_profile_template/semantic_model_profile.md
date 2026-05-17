@@ -1,4 +1,4 @@
-# Semantic Model Profile — [project_name]
+﻿# Semantic Model Profile â€” [project_name]
 
 ## 1. Purpose
 
@@ -141,7 +141,7 @@ Check:
 Semantic model approval requires one or more of:
 
 - latest model export
-- latest `.bim`
+- latest `semantic model export`
 - relationship screenshot
 - table/relationship list
 - measure list
@@ -165,3 +165,6 @@ DRAFT
 Project Profile:
 [project_name]
 ```
+
+
+

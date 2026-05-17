@@ -1,4 +1,4 @@
-# Project Memory — [project_name]
+﻿# Project Memory â€” [project_name]
 
 ## 1. Project Identity
 
@@ -83,13 +83,13 @@ Current architecture:
 
 ```text
 [Source]
-↓
+â†“
 [Transformation Layer]
-↓
+â†“
 [Mart / Reporting Layer]
-↓
+â†“
 [Semantic Model]
-↓
+â†“
 [Dashboard]
 ```
 
@@ -111,9 +111,9 @@ Expected dashboard analysis layers:
 
 ```text
 Executive Layer
-↓
+â†“
 Analytical Layer
-↓
+â†“
 Operational Layer
 ```
 
@@ -177,9 +177,9 @@ SQL should prioritize:
 
 ---
 
-## 11. DAX / Measure Principles for This Project
+## 11. Measure Logic Principles for This Project
 
-DAX or measure logic should prioritize:
+measure logic or measure logic should prioritize:
 
 - canonical measures
 - base measures first
@@ -248,3 +248,6 @@ ACTIVE / DRAFT / NEEDS REVIEW
 Framework phase:
 [phase]
 ```
+
+
+

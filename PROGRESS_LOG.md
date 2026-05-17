@@ -1,6 +1,6 @@
-# Progress Log — Arvizy
+﻿# Progress Log â€” Arvizy
 
-## Phase 0 — Concept Locked
+## Phase 0 â€” Concept Locked
 
 Status:
 
@@ -29,7 +29,7 @@ Initial planned agent modes:
 - Router Agent
 - SQL Optimizer Agent
 - SQL Validator Agent
-- DAX Optimizer Agent
+- Measure Optimizer Agent
 - Documentation Agent
 - Final Review Agent
 - Phase Handover Protocol
@@ -42,7 +42,7 @@ finance_ops_dev
 
 ---
 
-## Phase 1 — Repository and Folder Structure Setup
+## Phase 1 â€” Repository and Folder Structure Setup
 
 Status:
 
@@ -69,7 +69,7 @@ The project was structured as a reusable framework rather than a finance_ops_dev
 
 ---
 
-## Phase 2 — Core OS Knowledge Build
+## Phase 2 â€” Core OS Knowledge Build
 
 Status:
 
@@ -105,7 +105,7 @@ Core OS now defines:
 
 ---
 
-## Phase 3 — Agent Role Knowledge Build
+## Phase 3 â€” Agent Role Knowledge Build
 
 Status:
 
@@ -122,7 +122,7 @@ Completed files:
 ```text
 02_agents/01_sql_optimizer_mode.md
 02_agents/02_sql_validator_mode.md
-02_agents/03_dax_optimizer_mode.md
+02_agents/03_measure_optimizer_mode.md
 02_agents/04_documentation_mode.md
 02_agents/05_final_review_mode.md
 02_agents/06_phase_handover_protocol.md
@@ -132,7 +132,7 @@ The agent role layer now defines:
 
 - SQL optimization behavior
 - SQL validation behavior
-- DAX optimization behavior
+- measure optimization behavior
 - documentation behavior
 - final review behavior
 - phase handover behavior
@@ -141,7 +141,7 @@ Each agent has role boundaries, allowed actions, forbidden actions, output requi
 
 ---
 
-## Phase 4 — Finance Ops Dev Project Profile Build
+## Phase 4 â€” Finance Ops Dev Project Profile Build
 
 Status:
 
@@ -165,7 +165,7 @@ Completed files:
 00_validation_memory.md
 00_blocked_patterns.md
 00_naming_registry.md
-13_powerbi_implementation_drift_checklist.md
+13_bi_implementation_drift_checklist.md
 semantic_model_profile.md
 dashboard_blueprint_profile.md
 ```
@@ -179,13 +179,13 @@ The finance_ops_dev profile defines:
 - validation memory
 - blocked patterns
 - naming registry
-- Power BI implementation drift checklist
+- BI platform implementation drift checklist
 - semantic model expectations
 - dashboard blueprint expectations
 
 ---
 
-## Phase 5 — Review Record System and Example Workflow
+## Phase 5 â€” Review Record System and Example Workflow
 
 Status:
 
@@ -219,7 +219,7 @@ README.md
 phase_12_review_record.md
 sql_optimizer_handover.md
 sql_validator_handover.md
-dax_optimizer_handover.md
+measure_optimizer_handover.md
 documentation_handover.md
 final_review_output.md
 ```
@@ -227,7 +227,7 @@ final_review_output.md
 The example demonstrates a simulated full workflow for:
 
 ```text
-finance_ops_dev Phase 12 — Power BI Semantic Model Readiness
+finance_ops_dev Phase 12 â€” BI Semantic Model Readiness
 ```
 
 The example uses conservative wording:
@@ -240,7 +240,7 @@ and does not claim full real-project validation.
 
 ---
 
-## Phase 6 — Simulate and Test Agent Workflow
+## Phase 6 â€” Simulate and Test Agent Workflow
 
 Status:
 
@@ -274,7 +274,7 @@ Completed simulations:
 Router Agent: PASS
 SQL Optimizer Agent: PASS
 SQL Validator Agent: PASS
-DAX Optimizer Agent: PASS
+Measure Optimizer Agent: PASS
 Documentation Agent: PASS
 Final Review Agent: PASS
 ```
@@ -295,7 +295,7 @@ Important limitation:
 
 ```text
 Phase 6 validates manual / semi-manual workflow behavior only.
-It does not validate automated runner, MCP runtime, API orchestration, direct SQL execution, direct GitHub automation, or real Power BI model validation.
+It does not validate automated runner, MCP runtime, API orchestration, direct SQL execution, direct repository automation, or real BI platform model validation.
 ```
 
 ---
@@ -325,7 +325,7 @@ Manual / semi-manual workflow only. No automated runtime yet.
 ## Current Phase
 
 ```text
-Phase 7 — Agent Packaging / Usage Setup
+Phase 7 â€” Agent Packaging / Usage Setup
 ```
 
 Planned work:
@@ -347,3 +347,6 @@ Planned work:
 ```text
 Arvizy is ready for controlled manual workflow usage and Phase 7 packaging design.
 ```
+
+
+

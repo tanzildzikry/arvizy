@@ -1,8 +1,8 @@
-# Power BI Implementation Drift Checklist — finance_ops_dev
+﻿# BI platform Implementation Drift Checklist â€” finance_ops_dev
 
 ## 1. Purpose
 
-This checklist helps detect whether Power BI implementation has drifted from the approved semantic model and dashboard blueprint.
+This checklist helps detect whether BI platform implementation has drifted from the approved semantic model and dashboard blueprint.
 
 Implementation drift can occur when:
 
@@ -10,11 +10,11 @@ Implementation drift can occur when:
 - relationships are created incorrectly
 - control tables are connected accidentally
 - bidirectional filters are enabled
-- duplicate DAX measures are created
+- duplicate analytical measures are created
 - visuals use incorrect fields
 - KPI cards do not reconcile with SQL controls
 
-Arvizy must use this checklist when reviewing Power BI implementation readiness.
+Arvizy must use this checklist when reviewing BI platform implementation readiness.
 
 ---
 
@@ -205,7 +205,7 @@ Check:
 - date key is clean
 - active relationship is intentional
 - inactive relationships are documented
-- DAX using inactive relationships uses `USERELATIONSHIP()` when needed
+- measure logic using inactive relationships uses `USERELATIONSHIP()` when needed
 - current vs movement date logic is clear
 
 If date relationship is unclear:
@@ -216,7 +216,7 @@ NEEDS REVIEW
 
 ---
 
-## 11. DAX Measure Checklist
+## 11. Analytical Measure Checklist
 
 Check:
 
@@ -227,7 +227,7 @@ Check:
 - no duplicate by-division measures
 - numeric and display measures are separated
 - KPI measures reconcile with SQL/control outputs
-- DAX does not recreate SQL business shaping logic without justification
+- measure logic does not recreate SQL business shaping logic without justification
 
 If redundant measure exists:
 
@@ -249,7 +249,7 @@ depending on severity.
 
 For each KPI card, check:
 
-- Power BI measure value
+- BI platform measure value
 - SQL/control value
 - filter context
 - selected date/snapshot
@@ -340,11 +340,11 @@ NEEDS REVISION
 Use this format.
 
 ```text
-## Power BI Drift Review Output
+## BI platform Drift Review Output
 
 ### 1. Scope
 
-[Power BI implementation reviewed]
+[BI platform implementation reviewed]
 
 ### 2. Evidence Reviewed
 
@@ -363,7 +363,7 @@ Use this format.
 
 - [finding]
 
-### 6. DAX Findings
+### 6. Measure Logic Findings
 
 - [finding]
 
@@ -400,5 +400,8 @@ Project Profile:
 finance_ops_dev
 
 Framework phase:
-Phase 4 — Finance Ops Dev Project Profile Build
+Phase 4 â€” Finance Ops Dev Project Profile Build
 ```
+
+
+

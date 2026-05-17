@@ -1,4 +1,4 @@
-# Validation Memory — [project_name]
+﻿# Validation Memory â€” [project_name]
 
 ## 1. Purpose
 
@@ -38,7 +38,7 @@ FAILED VALIDATION
 |---|---|---|
 | SQL / data layer | NEEDS REVIEW | [notes] |
 | Semantic model | NEEDS REVIEW | [notes] |
-| Measures / DAX | NEEDS REVIEW | [notes] |
+| Measures / measure logic | NEEDS REVIEW | [notes] |
 | KPI reconciliation | NEEDS REVIEW | [notes] |
 | Documentation consistency | NEEDS REVIEW | [notes] |
 | Final phase readiness | NEEDS REVIEW | [notes] |
@@ -134,3 +134,6 @@ DRAFT
 Project Profile:
 [project_name]
 ```
+
+
+

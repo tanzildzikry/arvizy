@@ -1,4 +1,4 @@
-# Blocked Patterns — [project_name]
+﻿# Blocked Patterns â€” [project_name]
 
 ## 1. Purpose
 
@@ -30,7 +30,7 @@ FAILED VALIDATION
 
 ## 3. Blocked SQL / Data Patterns
 
-### SQL-BLOCK-001 — [Pattern Name]
+### SQL-BLOCK-001 â€” [Pattern Name]
 
 Pattern:
 
@@ -56,9 +56,9 @@ Expected:
 
 ---
 
-## 4. Blocked Measure / DAX Patterns
+## 4. Blocked Measure / Measure Logic Patterns
 
-### MEASURE-BLOCK-001 — [Pattern Name]
+### MEASURE-BLOCK-001 â€” [Pattern Name]
 
 Pattern:
 
@@ -86,7 +86,7 @@ Expected:
 
 ## 5. Blocked Semantic Model Patterns
 
-### MODEL-BLOCK-001 — [Pattern Name]
+### MODEL-BLOCK-001 â€” [Pattern Name]
 
 Pattern:
 
@@ -114,7 +114,7 @@ Expected:
 
 ## 6. Blocked Documentation Patterns
 
-### DOC-BLOCK-001 — Overclaiming Status
+### DOC-BLOCK-001 â€” Overclaiming Status
 
 Pattern:
 
@@ -136,7 +136,7 @@ Use NEEDS REVIEW, PASS STRUCTURE ONLY, or APPROVED FOR IMPLEMENTATION when evide
 
 ---
 
-### DOC-BLOCK-002 — Losing Historical Progress
+### DOC-BLOCK-002 â€” Losing Historical Progress
 
 Pattern:
 
@@ -160,7 +160,7 @@ Progress log should remain cumulative unless explicitly designed otherwise.
 
 ## 7. Blocked Final Review Patterns
 
-### FINAL-BLOCK-001 — Approval Without Evidence
+### FINAL-BLOCK-001 â€” Approval Without Evidence
 
 Pattern:
 
@@ -184,7 +184,7 @@ Final Review requires evidence before approval.
 
 ## 8. Data Safety Patterns
 
-### DATA-BLOCK-001 — Sensitive Data Exposure
+### DATA-BLOCK-001 â€” Sensitive Data Exposure
 
 Pattern:
 
@@ -209,3 +209,6 @@ DRAFT
 Project Profile:
 [project_name]
 ```
+
+
+

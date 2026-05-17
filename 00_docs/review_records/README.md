@@ -1,4 +1,4 @@
-# Review Records — Arvizy
+﻿# Review Records â€” Arvizy
 
 ## 1. Purpose
 
@@ -23,7 +23,7 @@ Create a review record when the workflow performs any of the following:
 
 - SQL optimizer review
 - SQL validation review
-- DAX optimizer review
+- measure optimizer review
 - semantic model review
 - dashboard blueprint review
 - documentation update review
@@ -47,7 +47,7 @@ Examples:
 ```text
 2026_05_17_finance_ops_dev_phase_12_blueprint_review.md
 2026_05_17_finance_ops_dev_sql_optimizer_review.md
-2026_05_17_finance_ops_dev_dax_optimizer_review.md
+2026_05_17_finance_ops_dev_measure_optimizer_review.md
 2026_05_17_finance_ops_dev_final_review.md
 ```
 
@@ -98,9 +98,9 @@ Valid evidence may include:
 - SQL validation output
 - database query output
 - semantic model export
-- `.bim` structure
+- `semantic model export` structure
 - Git diff/stat
-- Power BI relationship screenshot
+- BI platform relationship screenshot
 - KPI reconciliation result
 - explicit user-provided validation result
 
@@ -140,3 +140,6 @@ Manual review record creation
 Automation:
 Not yet implemented
 ```
+
+
+

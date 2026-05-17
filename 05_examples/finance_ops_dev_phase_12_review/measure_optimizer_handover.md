@@ -1,16 +1,16 @@
-# DAX Optimizer Handover — finance_ops_dev Phase 12 Example
+﻿# Measure Optimizer Handover â€” finance_ops_dev Phase 12 Example
 
 ## 1. Mode
 
 ```text
-DAX Optimizer Agent
+Measure Optimizer Agent
 ```
 
 ---
 
 ## 2. Task
 
-Review DAX design readiness for Phase 12 semantic model implementation.
+Review measure design readiness for Phase 12 semantic model implementation.
 
 ---
 
@@ -42,10 +42,10 @@ MEDIUM
 
 ## 6. Key Findings
 
-- DAX should follow canonical reusable measure design.
+- measure logic should follow canonical reusable measure design.
 - Existing measure check is required before creating new measures.
 - Duplicate by-PIC/by-customer/by-division measures should be blocked when relationship-driven slicing is enough.
-- DAX should not recreate stable SQL business shaping logic.
+- measure logic should not recreate stable SQL business shaping logic.
 - KPI measures must reconcile against SQL/control outputs before full approval.
 
 ---
@@ -64,16 +64,16 @@ MEDIUM
 
 - Semantic model profile.
 - Naming registry.
-- Blocked DAX patterns.
+- Blocked measure logic patterns.
 - SQL Validator handover.
 
 ---
 
 ## 9. Evidence Missing
 
-- Latest `.bim`.
+- Latest `semantic model export`.
 - Existing measure list.
-- Actual Power BI measure output.
+- Actual BI platform measure output.
 - KPI card reconciliation.
 
 ---
@@ -81,7 +81,7 @@ MEDIUM
 ## 10. Files Affected
 
 ```text
-No production DAX files affected.
+No production measure logic files affected.
 ```
 
 ---
@@ -96,6 +96,9 @@ Documentation Agent
 
 ## 12. Handover Notes
 
-- Documentation may record DAX design principles as implementation-ready.
-- Documentation must not claim DAX is fully validated.
+- Documentation may record measure design principles as implementation-ready.
+- Documentation must not claim measure logic is fully validated.
 - Final Review must check whether latest measure list and semantic model evidence are provided before approval.
+
+
+

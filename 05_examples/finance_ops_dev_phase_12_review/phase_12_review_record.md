@@ -1,4 +1,4 @@
-# Review Record — finance_ops_dev Phase 12 Semantic Model Readiness
+﻿# Review Record â€” finance_ops_dev Phase 12 Semantic Model Readiness
 
 ## 1. Review Metadata
 
@@ -8,7 +8,7 @@
 | Project | finance_ops_dev |
 | Review Topic | Phase 12 Semantic Model Readiness |
 | Workflow Type | FULL |
-| Agent Sequence | Router → SQL Optimizer → SQL Validator → DAX Optimizer → Documentation → Final Review |
+| Agent Sequence | Router â†’ SQL Optimizer â†’ SQL Validator â†’ Measure Optimizer â†’ Documentation â†’ Final Review |
 | Final Decision | APPROVED FOR IMPLEMENTATION |
 | Risk Level | MEDIUM |
 
@@ -16,14 +16,14 @@
 
 ## 2. Trigger / Task
 
-Review whether the `finance_ops_dev` project is ready to proceed with Phase 12 Power BI semantic model implementation.
+Review whether the `finance_ops_dev` project is ready to proceed with Phase 12 BI semantic model implementation.
 
 The review focuses on:
 
 - SQL reporting layer readiness
 - semantic model table responsibility
 - relationship design risk
-- canonical DAX baseline
+- canonical measure baseline
 - documentation consistency
 - final approval wording
 
@@ -38,7 +38,7 @@ The review focuses on:
 - `03_project_profiles/finance_ops_dev/00_naming_registry.md`
 - `03_project_profiles/finance_ops_dev/semantic_model_profile.md`
 - `03_project_profiles/finance_ops_dev/dashboard_blueprint_profile.md`
-- `03_project_profiles/finance_ops_dev/13_powerbi_implementation_drift_checklist.md`
+- `03_project_profiles/finance_ops_dev/13_bi_implementation_drift_checklist.md`
 
 ---
 
@@ -47,7 +47,7 @@ The review focuses on:
 1. Router Agent
 2. SQL Optimizer Agent
 3. SQL Validator Agent
-4. DAX Optimizer Agent
+4. Measure Optimizer Agent
 5. Documentation Agent
 6. Final Review Agent
 
@@ -59,12 +59,12 @@ The review focuses on:
 
 - Request is classified as `Mixed`.
 - Workflow intensity is `FULL`.
-- Full review is required because the task affects SQL readiness, semantic model readiness, DAX design, documentation, and phase status.
+- Full review is required because the task affects SQL readiness, semantic model readiness, measure design, documentation, and phase status.
 
 ### 5.2 SQL Optimizer Agent
 
 - SQL layer should remain the business shaping and mart readiness layer.
-- Power BI should consume curated mart/reporting objects.
+- BI platform should consume curated mart/reporting objects.
 - Raw/core tables should not be loaded directly into the main PBIX unless explicitly justified.
 - No SQL rewrite is required from this example alone because no specific SQL file/query was provided.
 - SQL validation requirements remain required before full approval.
@@ -75,12 +75,12 @@ The review focuses on:
 - Full SQL output validation is not complete in this example.
 - KPI reconciliation evidence is still required before full Phase 12 pass.
 
-### 5.4 DAX Optimizer Agent
+### 5.4 Measure Optimizer Agent
 
-- DAX should use canonical reusable measures.
+- measure logic should use canonical reusable measures.
 - Duplicate by-PIC, by-customer, or by-division measures should be blocked when dimensions already provide slicing.
-- Existing measure list and latest semantic model evidence are required before final DAX approval.
-- Full DAX validation remains pending.
+- Existing measure list and latest semantic model evidence are required before final measure logic approval.
+- Full measure validation remains pending.
 
 ### 5.5 Documentation Agent
 
@@ -96,7 +96,7 @@ The review focuses on:
 - Phase 12 can be approved for implementation planning.
 - Phase 12 cannot be marked as fully passed.
 - Missing evidence prevents final completion status.
-- Main risk is implementation drift during manual Power BI model build.
+- Main risk is implementation drift during manual BI platform model build.
 
 ---
 
@@ -107,16 +107,16 @@ The review focuses on:
 - Project profile exists.
 - Decision log defines core modeling rules.
 - Validation memory defines conservative status.
-- Blocked patterns define semantic model and DAX risks.
+- Blocked patterns define semantic model and measure logic risks.
 - Semantic model profile defines expected model behavior.
 - Dashboard blueprint profile defines visual and narrative intent.
 
 ### Evidence Missing
 
-- Latest `.bim` structure.
-- Actual Power BI relationship validation.
+- Latest `semantic model export` structure.
+- Actual BI platform relationship validation.
 - Actual loaded table list from PBIX.
-- Existing DAX measure list.
+- Existing analytical measure list.
 - SQL control reconciliation output.
 - KPI card reconciliation output.
 - Movement readiness output with distinct snapshot dates.
@@ -138,11 +138,11 @@ APPROVED FOR IMPLEMENTATION
 
 ### Decision Reason
 
-The structure and project profile rules are strong enough to proceed with controlled Phase 12 Power BI semantic model implementation.
+The structure and project profile rules are strong enough to proceed with controlled Phase 12 BI semantic model implementation.
 
 However, implementation-level validation is not complete.
 
-Full Phase 12 pass remains blocked until Power BI relationships, DAX measures, KPI cards, and validation outputs are checked.
+Full Phase 12 pass remains blocked until BI platform relationships, analytical measures, KPI cards, and validation outputs are checked.
 
 ---
 
@@ -152,7 +152,7 @@ Full Phase 12 pass remains blocked until Power BI relationships, DAX measures, K
 - Keep control tables disconnected.
 - Avoid fact-to-fact relationships by default.
 - Avoid bidirectional filters by default.
-- Use canonical DAX measures.
+- Use canonical analytical measures.
 - Use relationship-driven slicing.
 - Preserve cumulative documentation.
 - Use validation-first status wording.
@@ -163,20 +163,20 @@ Full Phase 12 pass remains blocked until Power BI relationships, DAX measures, K
 
 - Marking Phase 12 as fully passed.
 - Creating full movement trend interpretation without sufficient snapshot data.
-- Creating duplicate by-PIC/by-customer/by-division DAX measures.
+- Creating duplicate by-PIC/by-customer/by-division analytical measures.
 - Connecting control tables without explicit justification.
 - Creating fact-to-fact relationships without explicit validation.
-- Approving semantic model implementation without latest `.bim` or relationship evidence.
+- Approving semantic model implementation without latest `semantic model export` or relationship evidence.
 
 ---
 
 ## 10. Required Next Step
 
-- Build or review the actual Power BI semantic model.
+- Build or review the actual BI semantic model.
 - Provide loaded table list.
 - Validate relationships.
 - Confirm control tables remain disconnected.
-- Validate canonical DAX measures.
+- Validate canonical analytical measures.
 - Reconcile KPI cards against SQL/control outputs.
 - Record results in a review record.
 - Run Final Review before marking Phase 12 complete.
@@ -207,3 +207,6 @@ docs: add finance ops phase 12 example review
 - Do not treat this file as direct validation evidence for the real `finance_ops_dev` project.
 - Use this example to understand expected Arvizy workflow behavior.
 - Full validation still requires actual project evidence.
+
+
+

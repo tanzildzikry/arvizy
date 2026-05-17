@@ -1,4 +1,4 @@
-# SQL Validator Handover — finance_ops_dev Phase 12 Example
+﻿# SQL Validator Handover â€” finance_ops_dev Phase 12 Example
 
 ## 1. Mode
 
@@ -55,7 +55,7 @@ MEDIUM
 - Orphan key check.
 - KPI total reconciliation.
 - Movement readiness validation.
-- Power BI KPI reconciliation after model implementation.
+- BI platform KPI reconciliation after model implementation.
 
 ---
 
@@ -72,7 +72,7 @@ MEDIUM
 - Actual SQL validation result.
 - Database output.
 - SQL control totals.
-- Power BI KPI card values.
+- BI platform KPI card values.
 
 ---
 
@@ -87,7 +87,7 @@ No production SQL files affected.
 ## 11. Next Agent
 
 ```text
-DAX Optimizer Agent
+Measure Optimizer Agent
 ```
 
 ---
@@ -95,5 +95,8 @@ DAX Optimizer Agent
 ## 12. Handover Notes
 
 - Downstream agents must not treat SQL layer as fully validated.
-- DAX Optimizer may proceed with design principles, but final DAX approval requires semantic model and measure evidence.
+- Measure Optimizer may proceed with design principles, but final measure logic approval requires semantic model and measure evidence.
 - Documentation must preserve wording `PASS STRUCTURE ONLY` or `NEEDS REVIEW` where applicable.
+
+
+
