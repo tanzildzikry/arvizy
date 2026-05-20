@@ -71,3 +71,86 @@ No relationship validation, no DAX approval.
 No KPI reconciliation, no reporting readiness.
 No production readiness without SQL, model, DAX, visual, performance, and documentation evidence.
 ```
+
+<!-- BEGIN BI DELIVERY PROMOTION STATUS -->
+
+## BI Delivery Promotion Status
+
+`	ext
+ArvizyOS+ BI Delivery Extension = DEFAULT FOR BI DELIVERY WORKFLOW
+`
+
+## Promotion Basis
+
+The extension was promoted after a successful SQL Delivery Completeness Gate test using a new BC dataset.
+
+The refined output included:
+
+- workbook inspection
+- source-preserving raw layer
+- typed/cleaned core layer
+- Power BI-ready mart views
+- normalized relationship keys in fact views
+- key-to-key Power BI relationship guidance
+- Marlett document completeness decoding
+- explicit UMK reconciliation
+- relationship-check mart view
+- control/reconciliation views
+- validation query pack
+- physical dimension promotion criteria
+- Power BI semantic model guidance
+- no DAX creation
+- no production-readiness claim
+
+## Current Operating Role
+
+Use this extension as the default workflow for end-to-end BI delivery tasks:
+
+`	ext
+source profiling
+SQL raw/core/mart schema
+SQL validation pack
+Power BI semantic model contract
+relationship validation preparation
+DAX measure registry planning
+dashboard visual contract
+production readiness gate
+`
+
+## Governance Boundary
+
+This promotion does not approve any specific project, SQL implementation, semantic model, Power BI report, DAX measure, or production deployment.
+
+Production readiness still requires:
+
+`	ext
+SQL execution evidence
+row count reconciliation
+grain validation
+dimension key uniqueness
+orphan row validation
+semantic model export / .bim
+relationship screenshot or metadata
+measure inventory
+SQL vs Power BI KPI reconciliation
+visual behavior validation
+performance evidence
+documentation / handover evidence
+`
+
+## Mandatory Watchlist
+
+Every SQL delivery output must end with one of:
+
+`	ext
+SQL DELIVERY DESIGN COMPLETE FOR INITIAL BUILD â€” VALIDATION REQUIRED
+`
+
+or
+
+`	ext
+SQL DELIVERY DESIGN INCOMPLETE â€” REQUIRED COMPONENTS MISSING
+`
+
+<!-- END BI DELIVERY PROMOTION STATUS -->
+
