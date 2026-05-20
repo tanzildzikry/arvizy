@@ -87,3 +87,111 @@ Recommended minimum objects:
 - Do not use raw table as final Power BI fact.
 - Do not push visual-only behavior into SQL mart.
 - Do not omit validation queries for critical KPI fields.
+
+<!-- BEGIN DELIVERY REFINEMENT SQL DESIGN RULES -->
+
+## Delivery Refinement Rules
+
+When creating SQL schema for BI delivery, apply these additional mandatory rules.
+
+### Normalized Relationship Keys
+
+Fact mart views must expose normalized relationship keys directly:
+
+`	ext
+pic_key
+customer_key
+bc_key
+event_category_key
+status_key
+date_key / snapshot_date
+`
+
+Power BI guidance must use key-to-key relationships:
+
+`	ext
+dim_pic[pic_key] -> fact[pic_key]
+dim_customer[customer_key] -> fact[customer_key]
+dim_bc[bc_key] -> fact[bc_key]
+dim_event_category[event_category_key] -> fact[event_category_key]
+`
+
+Do not recommend relationships from dimension keys to display names unless the display name itself is the validated business key.
+
+### Marlett Document Completeness
+
+When source columns include SPK, PO, BAST, and BILLS with Marlett-style codes, document completeness must primarily decode those fields:
+
+`	ext
+a = available / checklist
+r = missing / X
+`
+
+Required fields where applicable:
+
+`	ext
+spk_available
+po_available
+bast_available
+bills_available
+mandatory_document_complete
+missing_document_list
+`
+
+dokumen_kurang may be used as supporting text, not sole truth, when Marlett document fields are present.
+
+### UMK Reconciliation
+
+UMK logic must explicitly support:
+
+`	ext
+UMK VENDOR + UMK NON VENDOR = UMK RELEASE
+PENGAJUAN UMK PENDING = pending / issued UMK
+`
+
+Required fields where applicable:
+
+`	ext
+umk_released_calculated_amount
+umk_release_difference_amount
+umk_release_reconciliation_status
+`
+
+### Relationship-Check View
+
+When Power BI implementation is expected, include a relationship-check mart view:
+
+`	ext
+03_mart.vw_powerbi_relationship_check
+`
+
+This view should expose fact rows, relationship keys, and key coverage status for PIC, customer, BC, category, and date.
+
+### Control / Reconciliation Views
+
+Include control views for validation:
+
+`	ext
+03_mart.vw_control_current_kpi
+03_mart.vw_control_snapshot_kpi
+03_mart.vw_control_movement_kpi
+03_mart.vw_control_data_quality
+`
+
+### Physical Dimension Promotion Criteria
+
+State whether dimension views are sufficient or whether physical dimension tables are required.
+
+Promote dimension views into physical dimensions when:
+
+`	ext
+alias mapping is required
+UNKNOWN row handling is required
+stable keys are required across refreshes
+manual stewardship is required
+performance becomes an issue
+SCD/history is required
+`
+
+<!-- END DELIVERY REFINEMENT SQL DESIGN RULES -->
+

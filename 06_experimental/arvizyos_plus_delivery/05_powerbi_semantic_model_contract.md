@@ -66,3 +66,60 @@ Control/reconciliation tables should normally remain disconnected.
 - No bidirectional filter unless justified and validated.
 - No DAX approval before relationship validation.
 - No reporting readiness without KPI reconciliation.
+
+<!-- BEGIN DELIVERY REFINEMENT SEMANTIC MODEL RULES -->
+
+## Delivery Refinement Rules
+
+### Relationship Key Mapping
+
+Semantic model guidance must use normalized key-to-key mapping.
+
+Preferred:
+
+`	ext
+dim_pic[pic_key] -> fact[pic_key]
+dim_customer[customer_key] -> fact[customer_key]
+dim_bc[bc_key] -> fact[bc_key]
+dim_event_category[event_category_key] -> fact[event_category_key]
+dim_date[date_key] -> fact[date_key]
+`
+
+Avoid:
+
+`	ext
+dim_pic[pic_key] -> fact[pic_name]
+dim_customer[customer_key] -> fact[customer_name]
+dim_bc[bc_key] -> fact[bc_number]
+`
+
+unless those display/name fields are explicitly validated as relationship keys.
+
+### Control Tables
+
+Control/reconciliation tables should remain disconnected in Power BI.
+
+They may be used for:
+
+`	ext
+KPI reconciliation cards
+SQL vs Power BI variance checks
+validation audit pages
+`
+
+They should not drive slicers or filter production fact tables unless explicitly justified.
+
+### Dimension View vs Physical Dimension
+
+The semantic model contract must state whether dimensions are:
+
+`	ext
+view-based dimensions
+physical dimension tables
+hybrid / pending promotion
+`
+
+If physical dimensions are not used, document the risk and validation requirements.
+
+<!-- END DELIVERY REFINEMENT SEMANTIC MODEL RULES -->
+
