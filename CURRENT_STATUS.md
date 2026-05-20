@@ -428,3 +428,96 @@ PASS
 Current decision:
 APPROVED FOR CONTROLLED USE
 ```
+
+<!-- BEGIN ARVIZYOS_PLUS_STATUS_UPDATE -->
+
+## Latest Status Update â€” ArvizyOS+
+
+Date: 2026-05-20
+
+### Status
+
+`	ext
+ArvizyOS+ = DEFAULT FOR BI ARCHITECTURE WORKFLOW
+ArvizyOS = STABLE GOVERNANCE BASELINE / FALLBACK
+`
+
+### Summary
+
+ArvizyOS+ has been promoted from experimental candidate to the default agent for BI architecture-heavy workflows after controlled A/B testing against baseline ArvizyOS.
+
+### Promotion Basis
+
+ArvizyOS+ was tested against ArvizyOS across five BI workflow scenarios:
+
+`	ext
+1. Semantic Model Readiness
+2. Open BC Count by PIC
+3. General BI Dashboard Readiness
+4. SQL vs DAX Responsibility
+5. Power BI Relationship Risk
+`
+
+Final A/B test result:
+
+`	ext
+ArvizyOS  = 222 / 250
+ArvizyOS+ = 247 / 250
+`
+
+### Accepted Scope
+
+ArvizyOS+ is now the default agent for:
+
+`	ext
+BI solution architecture
+SQL mart design review
+Semantic model design review
+Power BI relationship risk review
+DAX evaluation-context review
+Measure redundancy review
+Visual behavior validation
+Power BI implementation audit
+BI performance review
+Architecture final review
+`
+
+### Governance Boundary
+
+This promotion does not approve any project phase or BI implementation by itself.
+
+The following still require direct evidence:
+
+`	ext
+Power BI semantic model readiness
+Relationship readiness
+DAX readiness
+KPI reconciliation
+Phase 12 completion
+Commit readiness
+Production/reporting readiness
+`
+
+### Evidence Rule Remains Active
+
+`	ext
+No evidence, no approval.
+No validation, no status upgrade.
+No grain, no architecture approval.
+No relationship validation, no DAX approval.
+No KPI reconciliation, no reporting readiness.
+No git evidence, no commit approval.
+`
+
+### Current Repo State
+
+`	ext
+ArvizyOS+ experimental structure is merged into main.
+A/B test log is documented.
+Acceptance result is documented.
+Promotion decision record is documented.
+Main branch is clean and up to date at the time of this update.
+`
+
+<!-- END ARVIZYOS_PLUS_STATUS_UPDATE -->
+
